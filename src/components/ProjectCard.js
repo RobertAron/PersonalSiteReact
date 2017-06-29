@@ -10,7 +10,6 @@ class ProjectCard extends Component {
 	}
 
 	componentDidMount() {
-		console.log("in did mount");
 		const containers = document.querySelectorAll('.project-description');
 		Array.prototype.forEach.call(containers, (container) => {  // Loop through each container
 			var p = container.querySelector('p');
@@ -29,6 +28,7 @@ class ProjectCard extends Component {
 					<h2 className="project-title">{this.projectTitle}</h2>
 					<div className="project-fab-container">
 						<div className="project-fab animated">
+							{/*TODO replace with menu/icon menu*/}
 							<i className="material-icons">more_vert</i>
 						</div>
 					</div>

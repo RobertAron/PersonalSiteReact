@@ -8,16 +8,24 @@ import {createStore} from 'redux';
 import allReducers from './reducers';
 import {Provider} from 'react-redux';
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
 const store = createStore(allReducers);
 
 ReactDOM.render(
-    <Router>
-        <Provider store={store}>
-            <div>
-                <Route exact path="/" component={App}/>
-            </div>
-        </Provider>
-    </Router>, 
+    <MuiThemeProvider>
+        <Router>
+            <Provider store={store}>
+                <div>
+                    <Route exact path="/" component={App}/>
+                </div>
+            </Provider>
+        </Router>
+    </MuiThemeProvider>, 
     document.getElementById('root')
 );
 registerServiceWorker();
+
