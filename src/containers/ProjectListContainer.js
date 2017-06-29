@@ -1,7 +1,6 @@
-import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 //TODO: map to correct place
-import App from '../components/App';
+import ProjectList from '../components/ProjectList';
 
 const mapStateToProps = (state)=>{
     return{
@@ -10,4 +9,4 @@ const mapStateToProps = (state)=>{
 }
 
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(ProjectList);

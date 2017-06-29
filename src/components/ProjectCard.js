@@ -4,9 +4,9 @@ import './ProjectCard.css';
 class ProjectCard extends Component {
 	constructor(props) {
 		super(props);
-		this.imagesrc = "https://i.scdn.co/image/7fa9f83adc3efa7a984022bde0aac6a4b4eae404";
-		this.projectTitle = "Test Title";
-		this.projectInfo = "Here is a brief description of the thing and what it does. This continues on for a bit so that the length of the text goes off the card.";
+		this.imageSrc = this.props.project.imageSrc;
+		this.projectTitle = this.props.project.projectTitle;
+		this.projectInfo = this.props.project.projectInfo;
 	}
 
 	componentDidMount() {
@@ -24,7 +24,7 @@ class ProjectCard extends Component {
 	render() {
 		return (
 			<div className="project-card animated bounceIn">
-				<img alt={this.projectTitle} src={this.imagesrc} className="project-image"></img>
+				<img alt={this.projectTitle} src={this.imageSrc} className="project-image"></img>
 				<div className="project-title-area">
 					<h2 className="project-title">{this.projectTitle}</h2>
 					<div className="project-fab-container">
