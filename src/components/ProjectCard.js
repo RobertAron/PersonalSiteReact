@@ -24,7 +24,7 @@ class ProjectCard extends Component {
 	render() {
 		return (
 			<div className="project-card animated bounceIn">
-				<img src={this.imagesrc} className="project-image"></img>
+				<img alt={this.projectTitle} src={this.imagesrc} className="project-image"></img>
 				<div className="project-title-area">
 					<h2 className="project-title">{this.projectTitle}</h2>
 					<div className="project-fab-container">
