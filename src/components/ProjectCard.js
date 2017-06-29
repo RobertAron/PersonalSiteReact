@@ -27,7 +27,7 @@ class ProjectCard extends Component {
 				<div className="project-title-area">
 					<h2 className="project-title">{this.projectTitle}</h2>
 					<div className="project-fab-container">
-						<div className="project-fab animated">
+						<div className="project-fab fast-animated">
 							{/*TODO replace with menu/icon menu*/}
 							<i className="material-icons">more_vert</i>
 						</div>
