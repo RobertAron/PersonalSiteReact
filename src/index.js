@@ -6,14 +6,17 @@ import registerServiceWorker from './registerServiceWorker';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import {createStore} from 'redux';
 import allReducers from './reducers';
+import {Provider} from 'react-redux';
 
 const store = createStore(allReducers);
 
 ReactDOM.render(
     <Router>
-        <div>
-            <Route exact path="/" component={App}/>
-        </div>
+        <Provider store={store}>
+            <div>
+                <Route exact path="/" component={App}/>
+            </div>
+        </Provider>
     </Router>, 
     document.getElementById('root')
 );

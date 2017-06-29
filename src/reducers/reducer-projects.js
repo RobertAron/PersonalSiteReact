@@ -17,6 +17,12 @@ export default ()=>{
             imageSrc:"https://s-media-cache-ak0.pinimg.com/originals/a5/ff/e2/a5ffe2dec6a3e4f98964b7170f3b2e25.png",
             projectTitle:"Sly Pup",
             projectInfo:"Thats one sly lil pup yup, dat pup is a sly one. That pup is a good pup, but they're also real sly"
+        },
+        {
+            id: 4,
+            imageSrc:"https://i.imgur.com/P8lIeYU.jpg",
+            projectTitle:"Evolve Pup",
+            projectInfo:"who knew such a small lil pup could turn into a larger pup wow what a g o o d b o i"
         }
     ]
 }
