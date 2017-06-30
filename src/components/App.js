@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ProjectList from '../containers/ProjectListContainer'
-import Drawer from './Drawer'
+import Drawer from '../containers/DrawerContainer'
 import AppBar from './AppBar'
 
 

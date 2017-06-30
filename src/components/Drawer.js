@@ -3,25 +3,38 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 
-export default class DrawerSimpleExample extends React.Component {
+
+export default class DrawerUndockedExample extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {open: false};
   }
 
-  handleToggle = () => this.setState({open: !this.state.open});
+  handleToggle = () => {
+    console.log("in handle Toggle");
+    this.props.toggleDrawer(!this.props.open);
+  }
+
+  handleClose = () => {
+    console.log("wtf");
+    this.props.toggleDrawer(false);
+  }
 
   render() {
     return (
       <div>
         <RaisedButton
-          label="Toggle Drawer"
+          label="Open Drawer"
           onTouchTap={this.handleToggle}
         />
-        <Drawer open={this.state.open}>
-          <MenuItem>Menu Item</MenuItem>
-          <MenuItem>Menu Item 2</MenuItem>
+        <Drawer
+          docked={false}
+          width={200}
+          open={this.props.open}
+          onRequestChange={(open) => this.props.toggleDrawer(open)}
+        >
+          <MenuItem onTouchTap={this.handleClose}>Menu Item</MenuItem>
+          <MenuItem onTouchTap={this.handleClose}>Menu Item 2</MenuItem>
         </Drawer>
       </div>
     );
