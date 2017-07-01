@@ -18,7 +18,8 @@ export default class DrawerUndockedExample extends React.Component {
 	constructor(props){
 		super(props);
 		this.checkbox = {
-    		margin: 12
+    		margin: 12,
+			width:'calc(100%-24px)'
   		}
 	}
 
