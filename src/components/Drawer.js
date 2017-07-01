@@ -6,13 +6,21 @@ import Close from 'material-ui/svg-icons/navigation/close';
 import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
 import Divider from 'material-ui/Divider';
+import Checkbox from 'material-ui/Checkbox';
 import './Drawer.css'
+import ToolTip from './ToolTip'
+
+
+
 
 
 export default class DrawerUndockedExample extends React.Component {
 
-	constructor(props) {
+	constructor(props){
 		super(props);
+		this.checkbox = {
+    		margin: 12
+  		}
 	}
 
 
@@ -42,8 +50,7 @@ export default class DrawerUndockedExample extends React.Component {
 					<h1 className="center">Filters</h1>
 					<Divider/>
 
-					<MenuItem onTouchTap={this.handleClose}>Menu Item</MenuItem>
-					<MenuItem onTouchTap={this.handleClose}>Menu Item 2</MenuItem>
+					{this.createFilterList()}
 					<IconButton
 						style={placeLast}
 						onTouchTap={this.handleClose}
@@ -53,5 +60,16 @@ export default class DrawerUndockedExample extends React.Component {
 				</Drawer>
 			</div>
 		);
+	}
+
+
+
+	createFilterList(){
+		const possibleFilters = ["test1","test2"];
+		return possibleFilters.map((filter)=>{
+            return(
+                <Checkbox key={filter} label={filter} style={this.checkbox}/>
+                )
+        })
 	}
 }
