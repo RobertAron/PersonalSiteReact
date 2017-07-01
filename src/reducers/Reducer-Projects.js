@@ -1,4 +1,4 @@
-const defaultState = [
+const projects = [
     {
         id: 1,
         imageSrc: "https://i.scdn.co/image/7fa9f83adc3efa7a984022bde0aac6a4b4eae404",
@@ -56,6 +56,27 @@ const defaultState = [
         tag: ["test6", "test2"],
     }
 ]
+
+const tags = [
+    //tootlip visibility checked
+    ["tag1",true,false],
+    ["tag2",true,false],
+    ["tag3",true,false],
+    ["tag4",true,false],
+    ["tag5",true,false],
+    ["tag6",true,false]
+]
+
+const visibleProjects = projects.map((project)=>{
+    return project.id;
+})
+
+
+const defaultState = {
+    projects: projects,
+    tags: tags,
+    visibleProjects : visibleProjects
+}
 
 
 export default (state = defaultState, action) => {

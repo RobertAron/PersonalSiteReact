@@ -1,6 +1,6 @@
 const defaultState = 
 {
-    open: true,
+    open: false,
     tags:["test1","test2"]
 };
 

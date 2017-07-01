@@ -4,7 +4,7 @@ import filterReducer from './Reducer-Drawer'
 
 
 const allReducers = combineReducers({
-    projects: projectsReducer,
+    projectsData: projectsReducer,
     drawer: filterReducer
 })
 
