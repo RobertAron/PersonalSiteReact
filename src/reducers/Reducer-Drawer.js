@@ -1,16 +1,17 @@
-const drawerState = 
+const defaultDrawerState = 
 {
     open: false,
     tags:["test1","test2"]
 };
 
-export default (state=drawerState,action)=>{
-    if (state==null) return drawerState;
-    console.log(state);
+
+
+
+export default (state=defaultDrawerState,action)=>{
     switch(action.type){
         case "TOGGLE_DRAWER":
-            drawerState.open = !state.open;
+            state.open = !state.open;
             break;
     }
-    return drawerState
+    return state
 }
