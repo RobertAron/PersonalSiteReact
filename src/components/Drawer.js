@@ -8,6 +8,7 @@ import IconButton from 'material-ui/IconButton';
 import Divider from 'material-ui/Divider';
 import Checkbox from 'material-ui/Checkbox';
 import './Drawer.css'
+import ReactTooltip from 'react-tooltip'
 
 
 
@@ -68,7 +69,10 @@ export default class DrawerUndockedExample extends React.Component {
 		const possibleFilters = ["test1","test2"];
 		return possibleFilters.map((filter)=>{
             return(
-                <Checkbox key={filter} label={filter} style={this.checkbox}/>
+				<div>
+					<Checkbox key={filter} data-tip={filter} label={filter} style={this.checkbox}/>
+					<ReactTooltip place="right" type="dark" effect="solid"/>
+				</div>
                 )
         })
 	}
