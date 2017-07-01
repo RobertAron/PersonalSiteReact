@@ -8,7 +8,6 @@ import IconButton from 'material-ui/IconButton';
 import Divider from 'material-ui/Divider';
 import Checkbox from 'material-ui/Checkbox';
 import './Drawer.css'
-import ToolTip from './ToolTip'
 
 
 
