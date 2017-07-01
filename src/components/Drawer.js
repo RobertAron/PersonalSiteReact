@@ -68,9 +68,10 @@ export default class DrawerUndockedExample extends React.Component {
 	createFilterList(){
 		const possibleFilters = ["test1","test2"];
 		return possibleFilters.map((filter)=>{
+			console.log("mapping filter...",filter)
             return(
-				<div>
-					<Checkbox key={filter} data-tip={filter} label={filter} style={this.checkbox}/>
+				<div key={filter}>
+					<Checkbox data-tip={filter} label={filter} style={this.checkbox}/>
 					<ReactTooltip place="right" type="dark" effect="solid"/>
 				</div>
                 )

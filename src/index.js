@@ -14,6 +14,9 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
 const store = createStore(allReducers);
+store.subscribe(()=>{
+    console.log("store changed",store.getState());
+})
 
 ReactDOM.render(
     <MuiThemeProvider>

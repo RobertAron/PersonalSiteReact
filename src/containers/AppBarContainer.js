@@ -11,7 +11,6 @@ const mapStateToProps = (state)=>{
 
 function maptchDispatchToProps(dispatch){
     //the prop toggle drawer(which will be put in a prop in another file) : the function toggle drawer(which we import in this file)
-    console.log("mapping to appbar")
     return bindActionCreators({toggleDrawer:toggleDrawer},dispatch)
 }
 

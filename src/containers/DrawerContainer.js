@@ -4,6 +4,7 @@ import Drawer from '../components/Drawer';
 import {toggleDrawer} from '../actions/DrawerActions';
 
 const mapStateToProps = (state)=>{
+    console.log("mapping inside drawer container");
     return{
         open: state.drawer.open
     }

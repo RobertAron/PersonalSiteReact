@@ -8,9 +8,6 @@ import './AppBar.css'
  */
 
 export default class MyAppBar extends Component {
-	constructor(props) {
-		super(props);
-	}
 
 	handleToggle = () => {
 		this.props.toggleDrawer();

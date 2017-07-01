@@ -1,16 +1,16 @@
-const defaultDrawerState = 
+const defaultState = 
 {
-    open: false,
+    open: true,
     tags:["test1","test2"]
 };
 
 
 
 
-export default (state=defaultDrawerState,action)=>{
+export default (state=defaultState,action)=>{
     switch(action.type){
         case "TOGGLE_DRAWER":
-            state.open = !state.open;
+            state = {...state,open:!state.open};
             break;
     }
     return state
