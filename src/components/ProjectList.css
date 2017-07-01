@@ -1,8 +1,9 @@
 .project-list-container{
-    margin:10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    height:100%;
-    width:100%;
+    height:auto;
+    width:auto;
+    right:15px;
+    left:15px;
 }

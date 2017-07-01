@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux'
-import Drawer from '../components/Drawer';
+import AppBar from '../components/AppBar';
 import {toggleDrawer} from '../actions/DrawerActions';
 
 const mapStateToProps = (state)=>{
@@ -9,10 +9,10 @@ const mapStateToProps = (state)=>{
     }
 }
 
-
 function maptchDispatchToProps(dispatch){
     //the prop toggle drawer(which will be put in a prop in another file) : the function toggle drawer(which we import in this file)
+    console.log("mapping to appbar")
     return bindActionCreators({toggleDrawer:toggleDrawer},dispatch)
 }
 
-export default connect(mapStateToProps,maptchDispatchToProps)(Drawer);
+export default connect(mapStateToProps,maptchDispatchToProps)(AppBar);

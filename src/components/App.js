@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import ProjectList from '../containers/ProjectListContainer'
 import Drawer from '../containers/DrawerContainer'
-import AppBar from './AppBar'
+import AppBar from '../containers/AppBarContainer'
 
 
 
@@ -14,7 +14,7 @@ class App extends Component {
 		return (
 			<div className="App">
 				<AppBar/>
-				<Drawer open={true}/>
+				<Drawer/>
 				<ProjectList/>
 			</div>
 		);
