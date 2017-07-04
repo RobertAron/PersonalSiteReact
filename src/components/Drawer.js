@@ -63,19 +63,24 @@ export default class DrawerUndockedExample extends React.Component {
 		);
 	}
 
+	testCheckFunction(event,isInputChecked){
+		console.log("clicked a checkbox");
+		console.log(event);
+		console.log(isInputChecked);
+
+	}
+
 
 
 	createFilterList(){
 		const tags = this.props.tags
-		//first filter tags on if they are visible
-		console.log(tags);
 		const visibleTags = tags.filter((tag)=>{
 			return tag[1]
 		})
 		return visibleTags.map((tag)=>{
 			return(
 				<div key={tag[0]}>
-					<Checkbox data-tip={tag[2]} label={tag[0]} style={this.checkbox}/>
+					<Checkbox data-tip={tag[2]} label={tag[0]} style={this.checkbox} onCheck={this.testCheckFunction}/>
 					<ReactTooltip place="right" type="dark" effect="solid"/>
 				</div>
 			)

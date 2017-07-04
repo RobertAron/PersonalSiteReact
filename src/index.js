@@ -15,8 +15,7 @@ injectTapEventPlugin();
 
 const store = createStore(allReducers);
 store.subscribe(()=>{
-    console.log("DEBUG STORE");
-    console.log(store.getState());
+    console.log("DEBUG STORE",store.getState());
 })
 
 ReactDOM.render(
