@@ -59,15 +59,17 @@ const projects = [
 
 const tags = [
     //tootlip visibility checked
-    ["tag1",true,false],
-    ["tag2",true,false],
-    ["tag3",true,false],
-    ["tag4",true,false],
-    ["tag5",true,false],
-    ["tag6",true,false]
+    ["tag1", true, false],
+    ["tag2", true, false],
+    ["tag3", true, false],
+    ["tag4", true, false],
+    ["tag5", true, false],
+    ["tag6", true, false]
 ]
 
-const visibleProjects = projects.map((project)=>{
+
+
+const visibleProjects = projects.map((project) => {
     return project.id;
 })
 
@@ -75,10 +77,23 @@ const visibleProjects = projects.map((project)=>{
 const defaultState = {
     projects: projects,
     tags: tags,
-    visibleProjects : visibleProjects
+    visibleProjects: visibleProjects
 }
 
 
 export default (state = defaultState, action) => {
+    console.log("in reducer projects state", state);
+    switch (action.type) {
+        case "TOGGLE_TAG":
+            state = { ...state };
+            const updateTags = state.tags.map((tag)=>{
+                if(tag[0]==action.payload){
+                    tag[2]=!tag[2];
+                }
+                return tag;
+            })
+            state.tags = updateTags;
+            break;
+    }
     return state
 }

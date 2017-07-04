@@ -63,12 +63,8 @@ export default class DrawerUndockedExample extends React.Component {
 		);
 	}
 
-	testCheckFunction(event,isInputChecked){
-		console.log("clicked a checkbox");
-		console.log(event);
-		console.log(isInputChecked);
 
-	}
+
 
 
 
@@ -80,7 +76,7 @@ export default class DrawerUndockedExample extends React.Component {
 		return visibleTags.map((tag)=>{
 			return(
 				<div key={tag[0]}>
-					<Checkbox data-tip={tag[2]} label={tag[0]} style={this.checkbox} onCheck={this.testCheckFunction}/>
+					<Checkbox checked={tag[2]} data-tip={tag[2]} label={tag[0]} style={this.checkbox} onCheck={()=>this.props.toggleTag(tag[0])}/>
 					<ReactTooltip place="right" type="dark" effect="solid"/>
 				</div>
 			)
