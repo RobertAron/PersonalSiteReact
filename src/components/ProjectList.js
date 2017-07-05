@@ -4,6 +4,10 @@ import './ProjectList.css'
 
 
 class ProjectList extends Component{
+    constructor(props){
+        super(props);
+        this.elementCount = 0;
+    }
 
     createProjectList(){
         const filteredProjects = this.props.projects.filter((project)=>{
@@ -25,7 +29,7 @@ class ProjectList extends Component{
 
         return filteredProjects.map((project)=>{
             return(
-                <ProjectCard key={project.id} project={project}/>
+                <ProjectCard key={this.elementCount++} project={project}/>
                 )
         })
     }
