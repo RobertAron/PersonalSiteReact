@@ -1,9 +1,6 @@
 import React from 'react';
 import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
-import RaisedButton from 'material-ui/RaisedButton';
 import Close from 'material-ui/svg-icons/navigation/close';
-import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
 import Divider from 'material-ui/Divider';
 import Checkbox from 'material-ui/Checkbox';
@@ -69,14 +66,10 @@ export default class DrawerUndockedExample extends React.Component {
 
 
 	createFilterList(){
-		const tags = this.props.tags
-		const visibleTags = tags.filter((tag)=>{
-			return tag[1]
-		})
-		return visibleTags.map((tag)=>{
+		return this.props.tags.map((tag)=>{
 			return(
 				<div key={tag[0]}>
-					<Checkbox checked={tag[2]} data-tip={tag[2]} label={tag[0]} style={this.checkbox} onCheck={()=>this.props.toggleTag(tag[0])}/>
+					<Checkbox checked={tag[2]} data-tip={tag[2]} label={tag[0]} disabled={tag[1]} style={this.checkbox} onCheck={()=>this.props.toggleTag(tag[0])}/>
 					<ReactTooltip place="right" type="dark" effect="solid"/>
 				</div>
 			)
