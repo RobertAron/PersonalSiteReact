@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import ProjectList from '../components/ProjectList';
 
 const mapStateToProps = (state)=>{
-    console.log("state in project list",state);
     return{
         projects: state.projectsData.projects,
         tags: state.projectsData.tags

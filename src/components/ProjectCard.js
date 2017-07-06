@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './ProjectCard.css';
+import Popover from './Popover'
 
 class ProjectCard extends Component {
 	constructor(props) {
@@ -26,12 +27,7 @@ class ProjectCard extends Component {
 				<img alt={this.projectTitle} src={this.imageSrc} className="project-image"></img>
 				<div className="project-title-area">
 					<h2 className="project-title">{this.projectTitle}</h2>
-					<div className="project-fab-container">
-						<div className="project-fab fast-animated">
-							{/*TODO replace with menu/icon menu*/}
-							<i className="material-icons">more_vert</i>
-						</div>
-					</div>
+					<Popover projectLinks ={this.props.project.links}/>
 				</div>
 				<div className="project-description">
 					<p className="line-clamp">
