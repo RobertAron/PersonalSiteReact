@@ -4,10 +4,12 @@ import './index.css';
 import App from './components/App';
 import Project from './components/ProjectDetails'
 import registerServiceWorker from './registerServiceWorker';
-import { BrowserRouter as Router, Route  } from 'react-router-dom';
+import { BrowserRouter, Route  } from 'react-router-dom';
 import { createStore } from 'redux';
 import allReducers from './reducers';
 import { Provider } from 'react-redux';
+
+
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -33,14 +35,14 @@ const muiTheme = getMuiTheme({
 
 ReactDOM.render(
     <MuiThemeProvider muiTheme={muiTheme}>
-        <Router>
+        <BrowserRouter>
             <Provider store={store}>
                 <div>
                     <Route exact path="/" component={App} />
                     <Route path="/projects/:projectID" component={Project}/>
                 </div>
             </Provider>
-        </Router>
+        </BrowserRouter>
     </MuiThemeProvider>,
     document.getElementById('root')
 );

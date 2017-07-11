@@ -10,6 +10,7 @@ import './AppBar.css'
  * By default, the left icon is a navigation-menu.
  */
 
+
 export default class MyAppBar extends Component {
 
 	mainPage = () => {
