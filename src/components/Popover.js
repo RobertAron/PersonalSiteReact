@@ -42,7 +42,8 @@ export default class PopoverExampleSimple extends React.Component {
                             key={key}
                             leftIcon={<FontIcon className="fa fa-github" color={black}/>}
                             href={this.props.projectLinks.Github}
-                            target="_blank" />
+                            target="_blank"
+                            onTouchTap={this.handleRequestClose} />
                     )
                 case "Youtube":
                     return (
@@ -50,7 +51,8 @@ export default class PopoverExampleSimple extends React.Component {
                             key={key}
                             leftIcon={<FontIcon className="fa fa-youtube" color={red900}/>}
                             href={this.props.projectLinks.Youtube}
-                            target="_blank" />
+                            target="_blank"
+                            onTouchTap={this.handleRequestClose} />
                     )
                 case "Devpost":
                     return (
@@ -58,7 +60,8 @@ export default class PopoverExampleSimple extends React.Component {
                             key={key}
                             leftIcon={<img src='../../res/DevpostIcon.svg' alt="devpost"/>}
                             href={this.props.projectLinks.Devpost}
-                            target="_blank" />
+                            target="_blank"
+                            onTouchTap={this.handleRequestClose} />
                     )
                 default:
                     return (
@@ -66,7 +69,8 @@ export default class PopoverExampleSimple extends React.Component {
                             key={key}
                             leftIcon={<FontIcon className="fa fa-globe" />}
                             href={this.props.projectLinks.key}
-                            target="_blank" />
+                            target="_blank"
+                            onTouchTap={this.handleRequestClose} />
                     )
             }
         }))
@@ -90,7 +94,7 @@ export default class PopoverExampleSimple extends React.Component {
                     targetOrigin={{ horizontal: 'left', vertical: 'top' }}
                     onRequestClose={this.handleRequestClose}
                 >
-                    <Menu>
+                    <Menu disableAutoFocus={true}>
                         {this.createMenuList()}
                     </Menu>
                 </Popover>

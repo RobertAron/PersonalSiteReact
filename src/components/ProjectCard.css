@@ -83,7 +83,7 @@ animation-name: bounceIn;
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
-    color: #D32F2F;
+    color: white;
     font-size: 38px !important;
     line-height:55px !important;
     display: inline-block;
@@ -114,9 +114,11 @@ animation-name: bounceIn;
 }
 
 .project-fab{
+    
+
     border-radius: 50%;
     text-align:center;
-    background: white;
+    background-color: #132f76;
     box-shadow: 0 3px 20px 0 rgba(0,0,0,0.35);
     color: #D32F2F;
     cursor: pointer;
