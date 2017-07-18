@@ -5,7 +5,7 @@ import Popover from './Popover'
 class ProjectCard extends Component {
 	constructor(props) {
 		super(props);
-		this.imageSrc = this.props.project.imageSrc;
+		this.thumbnail = this.props.project.thumbnail;
 		this.projectTitle = this.props.project.projectTitle;
 		this.projectInfo = this.props.project.projectInfo;
 	}
@@ -24,14 +24,14 @@ class ProjectCard extends Component {
 	render() {
 		return (
 			<div className="project-card animated bounceIn">
-				<img alt={this.projectTitle} src={this.imageSrc} className="project-image"></img>
+				<img alt={this.projectTitle} src={this.thumbnail} className="project-image"></img>
 				<div className="project-title-area">
 					<h2 className="project-title">{this.projectTitle}</h2>
 					<Popover projectLinks ={this.props.project.links}/>
 				</div>
 				<div className="project-description">
 					<p className="line-clamp">
-						{this.projectInfo}
+						{this.projectInfo[0][1]}
 					</p>
 				</div>
 			</div>

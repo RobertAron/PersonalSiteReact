@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import ProjectContent from './ProjectDetailsContent'
 import ProjectErrorMessage from './ProjectErrorMessage'
-import './ProjectDetails.css'
 
 
 
@@ -26,14 +25,14 @@ class ProjectDetails extends Component {
 				if(projects[i].projectTitle===projectTitle){selectedProject=projects[i]}
 			}
 			return (
-				<div className="project-details">
+				<div>
 					<ProjectContent project={selectedProject}/>
 				</div>
 			);
 		}
 		else {
 			return (
-				<div className="project-details">
+				<div >
 					<ProjectErrorMessage />
 				</div>
 			)
