@@ -1,24 +1,43 @@
 import React, { Component } from 'react';
 import './App.css';
 import ProjectContent from './ProjectDetailsContent'
-import { Link } from 'react-router-dom'
+import ProjectErrorMessage from './ProjectErrorMessage'
+import './ProjectDetails.css'
 
 
 
 class ProjectDetails extends Component {
-	componentDidMount(){
+	componentDidMount() {
 		this.props.setProjectState(true);
 	}
 
 
 	render() {
-		return (
-			<div className="App">
-				<ProjectContent />
-				<h1>{this.props.match.params.project}</h1>
-				<Link to="/">Test Link</Link>
-			</div>
-		);
+		//figure out if the project in the top of the bar is contained within the projects list
+		const projectTitle = this.props.match.params.project;
+		const projects = this.props.projects;
+		const projectTitles = projects.map((project) => {
+			return project.projectTitle;
+		})
+		if (projectTitles.includes(projectTitle)) {
+
+			let selectedProject;
+			for(let i=0;i<projects.length;i++){
+				if(projects[i].projectTitle===projectTitle){selectedProject=projects[i]}
+			}
+			return (
+				<div className="project-details">
+					<ProjectContent project={selectedProject}/>
+				</div>
+			);
+		}
+		else {
+			return (
+				<div className="project-details">
+					<ProjectErrorMessage />
+				</div>
+			)
+		}
 	}
 }
 

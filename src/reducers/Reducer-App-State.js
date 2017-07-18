@@ -16,7 +16,7 @@ export default (state=defaultState,action)=>{
             if(action.payload===true) {state = {...state,projectState:true}}
             else {state = {...state,projectState:false}};
             return state;
+        default:
+            return state;
     }
-    console.log(state);
-    return state;
 }

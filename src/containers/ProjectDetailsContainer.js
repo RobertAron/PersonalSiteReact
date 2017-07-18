@@ -6,6 +6,7 @@ import {setProjectState} from '../actions/AppStateActions';
 
 const mapStateToProps = (state)=>{
     return{
+        projects: state.projectsData.projects
     }
 }
 
