@@ -1,12 +1,12 @@
 import {combineReducers} from 'redux';
 import projectsReducer from './Reducer-Projects';
-import filterReducer from './Reducer-Drawer'
+import appState from './Reducer-App-State'
 import { routerReducer } from 'react-router-redux'
 
 
 const allReducers = combineReducers({
     projectsData: projectsReducer,
-    drawer: filterReducer,
+    appState: appState,
     routing: routerReducer
 })
 

@@ -2,12 +2,23 @@ import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
 import './AppBar.css'
 
-/**
- * A simple example of `AppBar` with an icon on the right.
- * By default, the left icon is a navigation-menu.
- */
+import IconButton from 'material-ui/IconButton';
+import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import Menu from 'material-ui/svg-icons/navigation/menu';
+
+
 
 export default class MyAppBar extends Component {
+
+	leftIconDecider = ()=>{
+		if (this.props.projectState){
+			return <IconButton href="/"><NavigationClose /></IconButton>;
+		}
+		else{
+			return <IconButton><Menu /></IconButton>;
+		}
+	}
+
 
 	handleToggle = () => {
 		this.props.toggleDrawer();
@@ -20,7 +31,7 @@ export default class MyAppBar extends Component {
 					onLeftIconButtonTouchTap={this.handleToggle}
 					style={{ position: 'fixed' }}
 					title="Robert Aron"
-					iconClassNameRight="muidocs-icon-navigation-expand-more"
+					iconElementLeft={this.leftIconDecider()}
 				/>
 			</div>
 		);

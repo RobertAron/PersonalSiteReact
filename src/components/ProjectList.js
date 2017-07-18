@@ -8,6 +8,10 @@ class ProjectList extends Component{
         super(props);
         this.elementCount = 0;
     }
+    
+    componentDidMount(){
+        this.props.setProjectState(false);
+    }
 
     createProjectList(){
         const filteredProjects = this.props.projects.filter((project)=>{

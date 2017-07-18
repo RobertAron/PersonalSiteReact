@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
-import ProjectAppBar from './ProjectBar'
 import ProjectContent from './ProjectDetailsContent'
+import { Link } from 'react-router-dom'
 
 
 
-class App extends Component {
-
+class ProjectDetails extends Component {
+	componentDidMount(){
+		this.props.setProjectState(true);
+	}
 
 
 	render() {
 		return (
 			<div className="App">
-				<ProjectAppBar/>
-                <ProjectContent/>
+				<ProjectContent />
+				<h1>{this.props.match.params.project}</h1>
+				<Link to="/">Test Link</Link>
 			</div>
 		);
 	}
@@ -21,4 +24,4 @@ class App extends Component {
 
 
 
-export default App;
+export default ProjectDetails;

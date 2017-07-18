@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
-import Project from './components/ProjectDetails'
 import registerServiceWorker from './registerServiceWorker';
-import { BrowserRouter, Route  } from 'react-router-dom';
+import { BrowserRouter} from 'react-router-dom';
 import { createStore } from 'redux';
 import allReducers from './reducers';
 import { Provider } from 'react-redux';
@@ -35,14 +34,11 @@ const muiTheme = getMuiTheme({
 
 ReactDOM.render(
     <MuiThemeProvider muiTheme={muiTheme}>
-        <BrowserRouter>
-            <Provider store={store}>
-                <div>
-                    <Route exact path="/" component={App} />
-                    <Route path="/projects/:projectID" component={Project}/>
-                </div>
-            </Provider>
-        </BrowserRouter>
+        <Provider store={store}>
+            <BrowserRouter>
+                <App/>
+            </BrowserRouter>
+        </Provider>
     </MuiThemeProvider>,
     document.getElementById('root')
 );

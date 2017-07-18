@@ -6,7 +6,7 @@ import {toggleTag} from '../actions/DrawerActions'
 
 const mapStateToProps = (state)=>{
     return{
-        open: state.drawer.open,
+        open: state.appState.open,
         tags: state.projectsData.tags
     }
 }

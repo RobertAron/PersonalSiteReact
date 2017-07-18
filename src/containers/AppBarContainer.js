@@ -5,7 +5,8 @@ import {toggleDrawer} from '../actions/DrawerActions';
 
 const mapStateToProps = (state)=>{
     return{
-        open: state.drawer.open
+        open: state.appState.open,
+        projectState: state.appState.projectState
     }
 }
 

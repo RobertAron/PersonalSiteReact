@@ -1,12 +1,11 @@
 import {connect} from 'react-redux';
-import ProjectList from '../components/ProjectList';
+import ProjectDetails from '../components/ProjectDetails';
 import {bindActionCreators} from 'redux';
 import {setProjectState} from '../actions/AppStateActions';
 
+
 const mapStateToProps = (state)=>{
     return{
-        projects: state.projectsData.projects,
-        tags: state.projectsData.tags
     }
 }
 
@@ -18,5 +17,4 @@ function maptchDispatchToProps(dispatch){
     )
 }
 
-
-export default connect(mapStateToProps,maptchDispatchToProps)(ProjectList);
+export default connect(mapStateToProps,maptchDispatchToProps)(ProjectDetails);

@@ -6,7 +6,7 @@ class ProjectDetails extends Component{
 
     render(){
         return(
-            <h1>Hello World From Details</h1>
+            <h1>Hello World From Details Content</h1>
         )
         
     }

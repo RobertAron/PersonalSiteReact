@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import ProjectList from '../containers/ProjectListContainer'
-import Drawer from '../containers/DrawerContainer'
+import { Route } from 'react-router-dom';
 import AppBar from '../containers/AppBarContainer'
-
+import ProjectApp from './ProjectApp'
+import ProjectDetails from '../containers/ProjectDetailsContainer'
 
 
 class App extends Component {
@@ -14,8 +14,8 @@ class App extends Component {
 		return (
 			<div className="App">
 				<AppBar/>
-				<Drawer/>
-				<ProjectList/>
+				<Route exact path='/' component={ProjectApp}/>
+				<Route exact path='/projects/:project' component={ProjectDetails}/>
 			</div>
 		);
 	}
