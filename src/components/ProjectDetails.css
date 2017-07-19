@@ -1,34 +1,91 @@
 .project-details-column{
     display:flex;
-    justify-content: center;
     flex-direction: column;
 }
 
 .project-details-row{
     padding:15px;
     display:flex;
-    flex-direction: row;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 
-}
-@media screen and (max-width: 800px){
-    .project-details-row{
-        flex-direction: column;
-        align-items: center;
-    }
-}
 .paper{
     margin:10px;
     padding:10px;
     min-width: 300px;
-    max-width: 700px;
+    max-width: 810px;
 }
 
 .thumbnail{
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
     border-radius: 2px;
     margin:10px;
-    width: 275px;
-    height: 275px;
+    min-width:300px;
+    width: calc(100% - 25px);
+    height:auto;
 }
-/*1210*/
+
+.sub-images{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+    border-radius: 2px;
+    margin:10px;
+    min-width:300px;
+    width: calc(100% - 25px);
+    height:auto;
+
+}
+@media screen and (min-width: 880px){
+    .project-details-row{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .sub-images{
+        width: 200px;
+        height: 200px;
+        min-width:auto;
+    }
+    .thumbnail{
+        min-width:auto;
+        width: 275px;
+        height: 275px;
+    }
+}
+.bounceIn {
+    animation-duration: .6s;
+    animation-name: bounceIn;   
+}
+
+@keyframes bounceIn {
+    from, 20%, 40%, 60%, 80%, to {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+    }
+
+    20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+    transform: scale3d(.9, .9, .9);
+    }
+
+    60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+    transform: scale3d(.97, .97, .97);
+    }
+
+    to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+    }
+}

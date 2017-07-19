@@ -6,7 +6,7 @@ import Paper from 'material-ui/Paper';
 
 
 class ProjectDetails extends Component {
-    constructor(){
+    constructor() {
         super()
         this.keyCount = 0;
     }
@@ -29,8 +29,15 @@ class ProjectDetails extends Component {
         )
     }
     renderProjectPictures() {
+        const arrayPictures = this.props.project.images.map((picture) => {
+            return (
+                <img key={this.keyCount} alt={this.keyCount++} className="sub-images" src={picture} />
+            )
+        })
         return (
-            <h1>A picture</h1>
+            <div className="project-details-column">
+                {arrayPictures}
+            </div>
         )
     }
 
@@ -39,11 +46,11 @@ class ProjectDetails extends Component {
         console.log(this.props.project);
         return (
             <div className="project-details-row">
-                <img alt={this.props.project.projectTitle} className="thumbnail" src={this.props.project.thumbnail} />
-                <div className="project-details-column">
+                <img alt={this.props.project.projectTitle} className="thumbnail bounceIn" src={this.props.project.thumbnail} />
+                <div className="project-details-column bounceIn">
                     {this.renderProjectDescription()}
                 </div>
-                <div className="project-details-column">
+                <div className="project-details-column bounceIn">
                     {this.renderProjectPictures()}
                 </div>
             </div >
