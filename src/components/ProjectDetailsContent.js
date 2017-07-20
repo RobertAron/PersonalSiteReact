@@ -46,7 +46,7 @@ class ProjectDetails extends Component {
         return (
             <div className="shadow">
                 <div className="youtube-container" >
-                    <iframe title="Youtube-Video" className="youtube" src={this.props.project.video} frameborder="0" allowFullScreen>
+                    <iframe title="Youtube-Video" className="youtube" src={this.props.project.video} frameBorder="0" allowFullScreen>
                     </iframe>
                 </div>
             </div>
