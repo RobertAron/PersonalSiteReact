@@ -31,7 +31,7 @@ class ProjectDetails extends Component {
     renderProjectPictures() {
         const arrayPictures = this.props.project.images.map((picture) => {
             return (
-                <img key={this.keyCount} alt={this.keyCount++} className="sub-images" src={picture} />
+                <img key={this.keyCount++} alt="" className="sub-images" src={picture} />
             )
         })
         return (
@@ -41,13 +41,27 @@ class ProjectDetails extends Component {
         )
     }
 
+    renderYoutube() {
+
+        return (
+            <div className="shadow">
+                <div className="youtube-container" >
+                    <iframe title="Youtube-Video" className="youtube" src={this.props.project.video} frameborder="0" allowFullScreen>
+                    </iframe>
+                </div>
+            </div>
+        );
+    }
+
 
     render() {
-        console.log(this.props.project);
         return (
             <div className="project-details-row">
-                <img alt={this.props.project.projectTitle} className="thumbnail bounceIn" src={this.props.project.thumbnail} />
                 <div className="project-details-column bounceIn">
+                    <img alt={this.props.project.projectTitle} className="thumbnail bounceIn" src={this.props.project.thumbnail} />
+                </div>
+                <div className="project-details-column bounceIn">
+                    {this.props.project.video === null ? null : this.renderYoutube()}
                     {this.renderProjectDescription()}
                 </div>
                 <div className="project-details-column bounceIn">

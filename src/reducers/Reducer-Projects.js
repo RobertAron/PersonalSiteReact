@@ -13,7 +13,8 @@ const projects = [
             Youtube: "https://www.youtube.com/watch?v=BAgfJFeEHvk&ab_channel=HeyImRige",
             Devpost: "https://devpost.com/software/eco-drivr"
 
-        }
+        },
+        video:"https://www.youtube.com/watch?v=dHg50mdODFM&ab_channel=CartoonNetwork"
     },
     {
         id: 2,
@@ -65,7 +66,8 @@ const projects = [
         tags: ["test1", "test2"],
         links: {
 
-        }
+        },
+        video:"https://www.youtube.com/embed/dHg50mdODFM" 
     },
     {
         id: 6,

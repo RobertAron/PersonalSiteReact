@@ -17,6 +17,10 @@
     min-width: 300px;
     max-width: 810px;
 }
+.shadow{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+    margin:10px;
+}
 
 .thumbnail{
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
@@ -44,10 +48,11 @@
     .sub-images{
         width: 200px;
         height: 200px;
-        min-width:auto;
+    }
+    .youtube-container{
+        width:275px;
     }
     .thumbnail{
-        min-width:auto;
         width: 275px;
         height: 275px;
     }
@@ -88,4 +93,29 @@
     opacity: 1;
     transform: scale3d(1, 1, 1);
     }
+}
+
+
+
+.youtube-container{
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%); /*ios 7 border-radius-bug */
+    -webkit-transform: rotate(0.000001deg); /*mac os 10.6 safari 5 border-radius-bug */
+    -webkit-border-radius: 2px; 
+    -moz-border-radius: 2px;
+    border-radius: 2px; 
+    overflow: hidden; 
+}
+
+
+.youtube{
+    border:0px;
+    height:100%;
+    width:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
