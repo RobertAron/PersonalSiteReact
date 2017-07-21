@@ -59,7 +59,6 @@ class ProjectDetails extends Component {
             <div className="project-details-row">
                 <img alt={this.props.project.projectTitle} className="thumbnail bounceIn" src={this.props.project.thumbnail} />
                 <div className="project-details-column bounceIn">
-                    {console.log(this.props.project.video)}
                     {this.props.project.video === undefined ? null : this.renderYoutube()}
                     {this.renderProjectDescription()}
                 </div>
