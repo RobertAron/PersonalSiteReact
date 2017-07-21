@@ -27,7 +27,7 @@ class ProjectCard extends Component {
 				<img alt={this.projectTitle} src={this.thumbnail} className="project-image"></img>
 				<div className="project-title-area">
 					<h2 className="project-title">{this.projectTitle}</h2>
-					<Popover projectLinks ={this.props.project.links}/>
+					<Popover title={this.projectTitle} projectLinks ={this.props.project.links}/>
 				</div>
 				<div className="project-description">
 					<p className="line-clamp">

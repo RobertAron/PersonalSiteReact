@@ -4,7 +4,7 @@ import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import './ProjectCard.css';
 import FontIcon from 'material-ui/FontIcon';
-import {black, red900} from 'material-ui/styles/colors';
+import {black, red900,cyan900} from 'material-ui/styles/colors';
 
 
 
@@ -67,7 +67,7 @@ export default class PopoverExampleSimple extends React.Component {
                     return (
                         <MenuItem primaryText={key}
                             key={key}
-                            leftIcon={<FontIcon className="fa fa-globe" />}
+                            leftIcon={<FontIcon className="fa fa-globe" color={black}/>}
                             href={this.props.projectLinks.key}
                             target="_blank"
                             onTouchTap={this.handleRequestClose} />
@@ -77,6 +77,7 @@ export default class PopoverExampleSimple extends React.Component {
     }
 
     render() {
+        console.log(this.props);
         this.createMenuList()
         return (
             <div>
@@ -95,6 +96,12 @@ export default class PopoverExampleSimple extends React.Component {
                     onRequestClose={this.handleRequestClose}
                 >
                     <Menu disableAutoFocus={true}>
+                        <MenuItem
+                            primaryText="Local"
+                            key="Local"
+                            leftIcon={<FontIcon className="fa fa-info" color={cyan900}/>}
+                            href={"/projects/"+this.props.title}
+                            onTouchTap={this.handleRequestClose} />
                         {this.createMenuList()}
                     </Menu>
                 </Popover>
