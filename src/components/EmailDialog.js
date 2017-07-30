@@ -1,7 +1,6 @@
 import React from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
 
 /**
  * Dialog with action buttons. The actions are passed in as an array of React objects,
@@ -33,7 +32,6 @@ export default class DialogExampleSimple extends React.Component {
       <FlatButton
         label="Submit"
         primary={true}
-        keyboardFocused={true}
         onTouchTap={this.handleClose}
       />,
     ];

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
 import './AppBar.css'
-import FlatButton from 'material-ui/FlatButton';
 
 import IconButton from 'material-ui/IconButton';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';

@@ -8,8 +8,6 @@ import ProjectDetails from '../containers/ProjectDetailsContainer'
 
 class App extends Component {
 
-
-
 	render() {
 		return (
 			<div className="App">
