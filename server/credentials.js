@@ -4,9 +4,9 @@ const credentials = {
     from: 'example@gmail.com>', // sender address
     to: 'receiver@destination.com', // list of receivers
     subject: 'Email Example', // Subject line
-    text: "text" //, // plaintext body
+    text: "i made a change" //, // plaintext body
 }
 
 module.exports = {
-    credentials : credentials
+    credentials
 };
