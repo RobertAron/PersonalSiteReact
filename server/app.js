@@ -1,5 +1,5 @@
 // server/app.js
-const credentials =require('./credentials');
+const credentials =require('./credentials').credentials;
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
