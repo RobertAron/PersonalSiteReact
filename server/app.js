@@ -4,6 +4,7 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 const nodemailer = require('nodemailer');
+const bodyParser = require("body-parser");
 
 const app = express();
 
@@ -13,12 +14,16 @@ app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:htt
 // Serve static assets
 app.use(express.static(path.resolve(__dirname, '..', 'build')));
 
+//handle req stuff
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.json());
 // Always return the main index.html, so react-router render the route in the client
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
 });
 
 app.post('/api/sendmail',(req,res)=>{
+  
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth:{
@@ -27,10 +32,10 @@ app.post('/api/sendmail',(req,res)=>{
     }
   })
   const mailOptions = {
-    from: credentials.from, // sender address
+    from: req.body.from, // sender address
     to: credentials.to, // list of receivers
-    subject: credentials.subject, // Subject line
-    text:  credentials.text //, // plaintext body
+    subject: req.body.subject, // Subject line
+    text:  req.body.from+" \n"+req.body.body //, // plaintext body
   }
   transporter.sendMail(mailOptions,(error,info)=>{
     if(error){
@@ -43,7 +48,7 @@ app.post('/api/sendmail',(req,res)=>{
       res.json({message:"an email succeeded"})
     }
   })
-  console.log(credentials);
+  res.send();
 })
 
 
