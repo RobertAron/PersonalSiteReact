@@ -1,5 +1,5 @@
 // server/app.js
-const credentials =require('./credentials').credentials;
+const credentials = require('./credentials').credentials;
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
@@ -15,40 +15,40 @@ app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:htt
 app.use(express.static(path.resolve(__dirname, '..', 'build')));
 
 //handle req stuff
-app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 // Always return the main index.html, so react-router render the route in the client
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
+	res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
 });
 
-app.post('/api/sendmail',(req,res)=>{
-  
-  const transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    auth:{
-      user: credentials.from,
-      pass: credentials.password
-    }
-  })
-  const mailOptions = {
-    from: req.body.from, // sender address
-    to: credentials.to, // list of receivers
-    subject: req.body.subject, // Subject line
-    text:  req.body.from+" \n"+req.body.body //, // plaintext body
-  }
-  transporter.sendMail(mailOptions,(error,info)=>{
-    if(error){
-      console.log("sending the email failed");
-      console.log(error);
-      res.json({message:"an error occured"})
-    }
-    else{
-      console.log("sending the email succeeded");
-      res.json({message:"an email succeeded"})
-    }
-  })
-  res.send();
+app.post('/api/sendmail', (req, res) => {
+
+	const transporter = nodemailer.createTransport({
+		service: 'Gmail',
+		auth: {
+			user: credentials.from,
+			pass: credentials.password
+		}
+	})
+	const mailOptions = {
+		from: req.body.from, // sender address
+		to: credentials.to, // list of receivers
+		subject: req.body.subject, // Subject line
+		text: req.body.from + " \n" + req.body.body //, // plaintext body
+	}
+	transporter.sendMail(mailOptions, (error, info) => {
+		if (error) {
+			console.log("sending the email failed");
+			console.log(error);
+			res.json({ message: "an error occured" })
+		}
+		else {
+			console.log("sending the email succeeded");
+			res.json({ message: "an email succeeded" })
+		}
+	})
+	res.send();
 })
 
 

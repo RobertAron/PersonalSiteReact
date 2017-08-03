@@ -1,6 +1,8 @@
 import React from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
+import TextField from 'material-ui/TextField';
+import "./EmailDialog.css";
 
 /**
  * Dialog with action buttons. The actions are passed in as an array of React objects,
@@ -8,29 +10,35 @@ import FlatButton from 'material-ui/FlatButton';
  *
  * You can also close this dialog by clicking outside the dialog, or with the 'Esc' key.
  */
+
+
+
 export default class DialogExampleSimple extends React.Component {
   static muiName = 'FlatButton';
   state = {
     open: false,
   };
+  constructor(props){
+    super(props);
+  }
 
   handleOpen = () => {
-    this.setState({open: true});
+    this.setState({ open: true });
   };
 
   handleClose = () => {
-    this.setState({open: false});
+    this.setState({ open: false });
   };
 
   render() {
     const actions = [
       <FlatButton
-        label="Cancel"
+        label="Send"
         primary={true}
         onTouchTap={this.handleClose}
       />,
       <FlatButton
-        label="Submit"
+        label="Cancel"
         primary={true}
         onTouchTap={this.handleClose}
       />,
@@ -38,15 +46,27 @@ export default class DialogExampleSimple extends React.Component {
 
     return (
       <div>
-        <FlatButton {...this.props} label="Email Me"  onTouchTap={this.handleOpen} />
+        <FlatButton {...this.props} label="Email Me" onTouchTap={this.handleOpen} />
         <Dialog
-          title="Dialog With Actions"
+          titleClassName="dialog-title"
+          bodyClassName = "dialog-box"
+          title="Email Me"
           actions={actions}
           modal={false}
           open={this.state.open}
           onRequestClose={this.handleClose}
         >
-          The actions in this window were passed in as an array of React objects.
+          <TextField
+            hintText="Example_Email@Example.com"
+            floatingLabelText="Your Email Adress">
+          </TextField>
+          <br/>
+          <TextField
+            className = "email-body"
+            floatingLabelText="Email Body"
+            multiLine={true}
+            rows={4}
+          />
         </Dialog>
       </div>
     );
