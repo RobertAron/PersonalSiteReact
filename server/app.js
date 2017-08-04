@@ -23,6 +23,8 @@ app.get('*', (req, res) => {
 });
 
 app.post('/api/sendmail', (req, res) => {
+	console.log(req.body);
+	let body = req.body
 
 	const transporter = nodemailer.createTransport({
 		service: 'Gmail',
@@ -32,23 +34,22 @@ app.post('/api/sendmail', (req, res) => {
 		}
 	})
 	const mailOptions = {
-		from: req.body.from, // sender address
+		from: body.from, // sender address
 		to: credentials.to, // list of receivers
-		subject: req.body.subject, // Subject line
-		text: req.body.from + " \n" + req.body.body //, // plaintext body
+		subject: body.subject, // Subject line
+		text: body.from + " \n" + body.body //, // plaintext body
 	}
 	transporter.sendMail(mailOptions, (error, info) => {
 		if (error) {
 			console.log("sending the email failed");
 			console.log(error);
-			res.json({ message: "an error occured" })
+			res.json({sent:false});
 		}
 		else {
 			console.log("sending the email succeeded");
-			res.json({ message: "an email succeeded" })
+			res.json({sent:true});
 		}
 	})
-	res.send();
 })
 
 
