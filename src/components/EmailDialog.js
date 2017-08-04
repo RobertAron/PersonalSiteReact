@@ -5,6 +5,7 @@ import TextField from 'material-ui/TextField';
 import "./EmailDialog.css";
 import CircularProgress from 'material-ui/CircularProgress';
 
+const url = process.env !== 'production' ? 'http://localhost:9000' : '';
 /**
  * Dialog with action buttons. The actions are passed in as an array of React objects,
  * in this example [FlatButtons](/#/components/flat-button).
@@ -41,7 +42,7 @@ export default class DialogExampleSimple extends React.Component {
 			body: 'new content to test if there is a bug or somthing'
 		})
 		console.log(myBody);
-		fetch('/api/sendmail', {
+		fetch(url+'/api/sendmail', {
 			method: 'POST',
 			headers: {
 				'Accept': 'application/json',
@@ -49,7 +50,10 @@ export default class DialogExampleSimple extends React.Component {
 			},
 			body: myBody
 		})
-		.then((response) => response.json())
+		.then((response) => {
+			console.log(response);
+			return response.json();
+		})
 		.then((responseJson) => {
 			console.log(responseJson);
 			this.setState({ dialogState: emailStateEnum.SENT })

@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 const app = express();
 
@@ -17,6 +18,8 @@ app.use(express.static(path.resolve(__dirname, '..', 'build')));
 //handle req stuff
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
+
+app.use(cors());
 // Always return the main index.html, so react-router render the route in the client
 app.get('*', (req, res) => {
 	res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
