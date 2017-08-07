@@ -19,6 +19,10 @@ const emailStateEnum = {
 	SENT: "SENT",
 	ERROR: "ERROR"
 }
+let theirEmail = "default-email";
+let theirSubject = "default-subject";
+let theirBody = "default-body";
+
 
 export default class DialogExampleSimple extends React.Component {
 	static muiName = 'FlatButton';
@@ -28,7 +32,7 @@ export default class DialogExampleSimple extends React.Component {
 	};
 
 	handleOpen = () => {
-		this.setState({ open: true,dialogState: emailStateEnum.CONTENT });
+		this.setState({ open: true, dialogState: emailStateEnum.CONTENT });
 	};
 
 	handleClose = () => {
@@ -37,12 +41,12 @@ export default class DialogExampleSimple extends React.Component {
 	handleSend = () => {
 		console.log("in handle send");
 		const myBody = JSON.stringify({
-			from: 'ATestValue@gmail.com',
-			subject: 'I\'m Testing Emails on the site',
-			body: 'new content to test if there is a bug or somthing'
+			from: theirEmail,
+			subject: theirSubject,
+			body: theirBody
 		})
 		console.log(myBody);
-		fetch(url+'/api/sendmail', {
+		fetch(url + '/api/sendmail', {
 			method: 'POST',
 			headers: {
 				'Accept': 'application/json',
@@ -50,21 +54,21 @@ export default class DialogExampleSimple extends React.Component {
 			},
 			body: myBody
 		})
-		.then((response) => {
-			console.log(response);
-			return response.json();
-		})
-		.then((responseJson) => {
-			console.log(responseJson);
-			if(responseJson){
-				this.setState({ dialogState: emailStateEnum.SENT });
-			}else{
-				this.setState({ dialogState: emailStateEnum.ERROR });
-			}
+			.then((response) => {
+				console.log(response);
+				return response.json();
+			})
+			.then((responseJson) => {
+				console.log(responseJson);
+				if (responseJson) {
+					this.setState({ dialogState: emailStateEnum.SENT });
+				} else {
+					this.setState({ dialogState: emailStateEnum.ERROR });
+				}
 
-		}).catch((e)=>{
-			this.setState({ dialogState: emailStateEnum.ERROR });
-		});
+			}).catch((e) => {
+				this.setState({ dialogState: emailStateEnum.ERROR });
+			});
 		this.setState({ dialogState: emailStateEnum.SENDING })
 	}
 	render() {
@@ -96,13 +100,26 @@ export default class DialogExampleSimple extends React.Component {
 					<div>
 						<TextField
 							hintText="Example_Email@Example.com"
-							floatingLabelText="Your Email Adress">
+							floatingLabelText="Your Email Adress"
+							onChange={(newEvent, newValue) => {
+								theirEmail = newValue;
+							}}>
+						</TextField>
+						<br />
+						<TextField
+							floatingLabelText="Subject"
+							onChange={(newEvent, newValue) => {
+								theirSubject = newValue;
+							}}>
 						</TextField>
 						<br />
 						<TextField
 							className="email-body"
 							floatingLabelText="Email Body"
 							multiLine={true}
+							onChange={(newEvent, newValue) => {
+								theirBody = newValue;
+							}}
 							rows={4}
 						/>
 					</div>
