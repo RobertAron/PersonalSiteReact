@@ -4,9 +4,10 @@
     bottom: 0;
     left: 0;
     right: 0;
+    background-color: #E0F2F1;
 }
 
 .body-container{
     height: calc(100% - 64px);
-    overflow: scroll;
+    overflow-y: scroll;
 }

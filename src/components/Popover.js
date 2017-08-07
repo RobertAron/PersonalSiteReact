@@ -4,7 +4,7 @@ import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import './ProjectCard.css';
 import FontIcon from 'material-ui/FontIcon';
-import {black, red900,cyan900} from 'material-ui/styles/colors';
+import {black, red900} from 'material-ui/styles/colors';
 
 
 
@@ -50,7 +50,7 @@ export default class PopoverExampleSimple extends React.Component {
                         <MenuItem primaryText={key}
                             key={key}
                             leftIcon={<FontIcon className="fa fa-youtube" color={red900}/>}
-                            href={this.props.projectLinks.youtube}
+                            href={"https://youtu.be/"+this.props.projectLinks.youtube}
                             target="_blank"
                             onTouchTap={this.handleRequestClose} />
                     )
@@ -98,7 +98,7 @@ export default class PopoverExampleSimple extends React.Component {
                         <MenuItem
                             primaryText="Local"
                             key="Local"
-                            leftIcon={<FontIcon className="fa fa-info" color={cyan900}/>}
+                            leftIcon={<img src="../../res/icons/mipmap-xxhdpi/ic_launcher.png" alt="local"/>}
                             href={"/projects/"+this.props.title}
                             onTouchTap={this.handleRequestClose} />
                         {this.createMenuList()}

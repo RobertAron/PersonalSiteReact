@@ -10,7 +10,7 @@ const projects = [
         tags: ["test1", "test2"],
         links: {
             github: "https://github.com/RobertAron/JuceCustomGraphics",
-            youtube: "https://www.youtube.com/embed/cM09hWIPUqY",
+            youtube: "cM09hWIPUqY",
             devpost: "https://devpost.com/software/eco-drivr"
 
         }
