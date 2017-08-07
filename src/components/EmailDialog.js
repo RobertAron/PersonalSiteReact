@@ -28,7 +28,7 @@ export default class DialogExampleSimple extends React.Component {
 	};
 
 	handleOpen = () => {
-		this.setState({ open: true });
+		this.setState({ open: true,dialogState: emailStateEnum.CONTENT });
 	};
 
 	handleClose = () => {
@@ -56,8 +56,15 @@ export default class DialogExampleSimple extends React.Component {
 		})
 		.then((responseJson) => {
 			console.log(responseJson);
-			this.setState({ dialogState: emailStateEnum.SENT })
-		})
+			if(responseJson){
+				this.setState({ dialogState: emailStateEnum.SENT });
+			}else{
+				this.setState({ dialogState: emailStateEnum.ERROR });
+			}
+
+		}).catch((e)=>{
+			this.setState({ dialogState: emailStateEnum.ERROR });
+		});
 		this.setState({ dialogState: emailStateEnum.SENDING })
 	}
 	render() {
