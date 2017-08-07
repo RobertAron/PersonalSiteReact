@@ -36,30 +36,30 @@ export default class PopoverExampleSimple extends React.Component {
     createMenuList() {
         return(Object.keys(this.props.projectLinks).map((key, value) => {
             switch (key) {
-                case "Github":
+                case "github":
                     return (
                         <MenuItem primaryText={key}
                             key={key}
                             leftIcon={<FontIcon className="fa fa-github" color={black}/>}
-                            href={this.props.projectLinks.Github}
+                            href={this.props.projectLinks.github}
                             target="_blank"
                             onTouchTap={this.handleRequestClose} />
                     )
-                case "Youtube":
+                case "youtube":
                     return (
                         <MenuItem primaryText={key}
                             key={key}
                             leftIcon={<FontIcon className="fa fa-youtube" color={red900}/>}
-                            href={this.props.projectLinks.Youtube}
+                            href={this.props.projectLinks.youtube}
                             target="_blank"
                             onTouchTap={this.handleRequestClose} />
                     )
-                case "Devpost":
+                case "devpost":
                     return (
                         <MenuItem primaryText={key}
                             key={key}
                             leftIcon={<img src='../../res/DevpostIcon.svg' alt="devpost"/>}
-                            href={this.props.projectLinks.Devpost}
+                            href={this.props.projectLinks.devpost}
                             target="_blank"
                             onTouchTap={this.handleRequestClose} />
                     )

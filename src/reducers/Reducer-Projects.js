@@ -9,12 +9,11 @@ const projects = [
         ["Sub Title 2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elementum arcu vitae turpis viverra, eget facilisis sem iaculis. Curabitur finibus eros at elit elementum, eu varius nisi tincidunt. Quisque odio sapien, viverra id turpis id, dictum semper dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc velit lacus, fringilla eu nunc in, blandit imperdiet ligula. Etiam vestibulum, urna ut congue pellentesque, metus augue tempus quam, vel luctus ante diam porta libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus, enim vitae sollicitudin auctor, sem dui finibus orci, quis efficitur nunc est at felis. Duis dictum elit non purus semper feugiat. Nam iaculis felis non tortor accumsan, et gravida enim consectetur. Aenean at ligula odio. Maecenas placerat non justo varius viverra. Nullam gravida tortor sit amet pellentesque gravida. Quisque tristique enim ornare, ultricies velit non, fermentum mauris. Sed eros lectus, lacinia eu nulla quis, mattis condimentum ex. Vestibulum fermentum justo vitae velit iaculis venenatis. Pellentesque vel accumsan mauris, posuere sagittis diam. Maecenas hendrerit quam risus, ac fermentum urna feugiat eget. Suspendisse consectetur malesuada lorem, ac pulvinar nunc tincidunt vel. Sed."]],
         tags: ["test1", "test2"],
         links: {
-            Github: "https://github.com/RobertAron/JuceCustomGraphics",
-            Youtube: "https://www.youtube.com/watch?v=BAgfJFeEHvk&ab_channel=HeyImRige",
-            Devpost: "https://devpost.com/software/eco-drivr"
+            github: "https://github.com/RobertAron/JuceCustomGraphics",
+            youtube: "https://www.youtube.com/embed/cM09hWIPUqY",
+            devpost: "https://devpost.com/software/eco-drivr"
 
-        },
-        video:"https://www.youtube.com/watch?v=dHg50mdODFM&ab_channel=CartoonNetwork"
+        }
     },
     {
         id: 2,

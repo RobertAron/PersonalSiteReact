@@ -12,8 +12,10 @@ class App extends Component {
 		return (
 			<div className="App">
 				<AppBar/>
-				<Route exact path='/' component={ProjectApp}/>
-				<Route exact path='/projects/:project' component={ProjectDetails}/>
+				<div className="body-container">
+					<Route exact path='/' component={ProjectApp}/>
+					<Route exact path='/projects/:project' component={ProjectDetails}/>
+				</div>
 			</div>
 		);
 	}

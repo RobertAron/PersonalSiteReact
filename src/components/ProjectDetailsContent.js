@@ -42,12 +42,12 @@ class ProjectDetails extends Component {
     }
 
     renderYoutube() {
-
+        console.log(this.props.project);
         return (
             <div className="shadow">
                 <div className="youtube-container" >
-                    <iframe title="Youtube-Video" className="youtube" src={this.props.project.video} frameBorder="0" allowFullScreen>
-                    </iframe>
+                    <iframe title="Youtube-Video" className="youtube" src={this.props.project.links.youtube} frameborder="0" allowfullscreen></iframe>
+                    {/*<iframe title="Youtube-Video" className="youtube" src={this.props.project.video} frameBorder="0" allowFullScreen></iframe>*/}
                 </div>
             </div>
         );
@@ -59,7 +59,7 @@ class ProjectDetails extends Component {
             <div className="project-details-row">
                 <img alt={this.props.project.projectTitle} className="thumbnail bounceIn" src={this.props.project.thumbnail} />
                 <div className="project-details-column bounceIn">
-                    {this.props.project.video === undefined ? null : this.renderYoutube()}
+                    {this.props.project.links.youtube === undefined ? null : this.renderYoutube()}
                     {this.renderProjectDescription()}
                 </div>
                 <div className="project-details-column bounceIn">
