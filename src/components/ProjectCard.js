@@ -26,11 +26,13 @@ class ProjectCard extends Component {
 		console.log(this.props);
 		return (
 			<div className="project-card animated bounceIn">
-				<Link to={"/projects/"+this.props.project.projectT}>
+				<Link to={"/projects/"+this.props.project.projectTitle}>
 					<img alt={this.projectTitle} src={this.thumbnail} className="project-image"></img>
 				</Link>
 				<div className="project-title-area">
+					<Link to={"/projects/"+this.props.project.projectTitle}>
 					<h2 className="project-title">{this.projectTitle}</h2>
+					</Link>
 					<Popover title={this.projectTitle} projectLinks ={this.props.project.links}/>
 				</div>
 				<div className="project-description">

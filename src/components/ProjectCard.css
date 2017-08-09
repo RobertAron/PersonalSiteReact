@@ -78,6 +78,10 @@ animation-name: bounceIn;
     color:white;
 }
 
+a{
+    text-decoration: none;
+}
+
 
 
 .material-icons {
