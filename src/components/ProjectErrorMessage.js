@@ -10,7 +10,7 @@ class ProjectErrorMessage extends Component {
         return (
             <div className="project-details">
                 <h1>WHOOPS THATS NOT A PROJECT!</h1>
-                <Link to='/'>Lets get out of here</Link>
+                <Link to='/'>Click here to get back to a main page</Link>
             </div>
         )
     }

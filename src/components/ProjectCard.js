@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './ProjectCard.css';
 import Popover from './Popover'
+import { Link } from 'react-router-dom'
 
 class ProjectCard extends Component {
 	constructor(props) {
@@ -22,9 +23,12 @@ class ProjectCard extends Component {
 	}
 
 	render() {
+		console.log(this.props);
 		return (
 			<div className="project-card animated bounceIn">
-				<img alt={this.projectTitle} src={this.thumbnail} className="project-image"></img>
+				<Link to={"/projects/"+this.props.project.projectT}>
+					<img alt={this.projectTitle} src={this.thumbnail} className="project-image"></img>
+				</Link>
 				<div className="project-title-area">
 					<h2 className="project-title">{this.projectTitle}</h2>
 					<Popover title={this.projectTitle} projectLinks ={this.props.project.links}/>
