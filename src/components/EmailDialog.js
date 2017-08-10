@@ -30,9 +30,32 @@ export default class DialogExampleSimple extends React.Component {
 		open: false,
 		dialogState: emailStateEnum.CONTENT
 	};
+	 componentDidMount(){
+		this.setState({validEmailEntered: false});
+	}
+
+	isValidEmail = (email)=>{
+		let regex= /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		if( regex.test(email)){
+			this.setState({validEmailEntered:true});
+		}
+		else{
+			this.setState({validEmailEntered:false});
+		}
+		return(this.state.validEmailEntered);
+	}
+	emailErrorMessage = ()=>{
+		if (this.state.validEmailEntered){
+			return undefined;
+		}
+		else{
+			return "Invalid Email Adress";
+		}
+	}
 
 	handleOpen = () => {
 		this.setState({ open: true, dialogState: emailStateEnum.CONTENT });
+		this.setState({validEmailEntered:false});
 	};
 
 	handleClose = () => {
@@ -102,7 +125,7 @@ export default class DialogExampleSimple extends React.Component {
 							hintText="Example_Email@Example.com"
 							floatingLabelText="Your Email Adress"
 							onChange={(newEvent, newValue) => {
-								theirEmail = newValue;
+								this.isValidEmail(newValue);
 							}}>
 						</TextField>
 						<br />
@@ -155,6 +178,7 @@ export default class DialogExampleSimple extends React.Component {
 							label="Send"
 							primary={true}
 							onTouchTap={this.handleSend}
+							disabled = {!this.state.validEmailEntered}
 						/>,
 						<FlatButton
 							label="Cancel"

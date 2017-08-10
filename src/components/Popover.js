@@ -96,8 +96,8 @@ export default class PopoverExampleSimple extends React.Component {
                 >
                     <Menu disableAutoFocus={true}>
                         <MenuItem
-                            primaryText="Local"
-                            key="Local"
+                            primaryText="Learn More"
+                            key="Learn More"
                             leftIcon={<img src="../../res/icons/mipmap-xxhdpi/ic_launcher.png" alt="local"/>}
                             href={"/projects/"+this.props.title}
                             onTouchTap={this.handleRequestClose} />
