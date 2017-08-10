@@ -4,6 +4,7 @@ import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 import "./EmailDialog.css";
 import CircularProgress from 'material-ui/CircularProgress';
+import { red500 } from 'material-ui/styles/colors';
 
 const url = process.env !== 'production' ? 'http://localhost:9000' : '';
 /**
@@ -19,6 +20,11 @@ const emailStateEnum = {
 	SENT: "SENT",
 	ERROR: "ERROR"
 }
+const errorColor = {
+	color: red500,
+	borderColor: red500
+}
+
 let theirEmail = "default-email";
 let theirSubject = "default-subject";
 let theirBody = "default-body";
@@ -30,32 +36,32 @@ export default class DialogExampleSimple extends React.Component {
 		open: false,
 		dialogState: emailStateEnum.CONTENT
 	};
-	 componentDidMount(){
-		this.setState({validEmailEntered: false});
+	componentDidMount() {
+		this.setState({ validEmailEntered: false });
 	}
 
-	isValidEmail = (email)=>{
-		let regex= /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		if( regex.test(email)){
-			this.setState({validEmailEntered:true});
+	isValidEmail = (email) => {
+		let regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		if (regex.test(email)) {
+			this.setState({ validEmailEntered: true });
 		}
-		else{
-			this.setState({validEmailEntered:false});
+		else {
+			this.setState({ validEmailEntered: false });
 		}
-		return(this.state.validEmailEntered);
+		return (this.state.validEmailEntered);
 	}
-	emailErrorMessage = ()=>{
-		if (this.state.validEmailEntered){
+	emailErrorMessage = () => {
+		if (this.state.validEmailEntered) {
 			return undefined;
 		}
-		else{
+		else {
 			return "Invalid Email Adress";
 		}
 	}
 
 	handleOpen = () => {
 		this.setState({ open: true, dialogState: emailStateEnum.CONTENT });
-		this.setState({validEmailEntered:false});
+		this.setState({ validEmailEntered: false });
 	};
 
 	handleClose = () => {
@@ -126,7 +132,11 @@ export default class DialogExampleSimple extends React.Component {
 							floatingLabelText="Your Email Adress"
 							onChange={(newEvent, newValue) => {
 								this.isValidEmail(newValue);
-							}}>
+							}}
+							underlineFocusStyle={this.state.validEmailEntered ? null : errorColor}
+							underlineStyle={this.state.validEmailEntered ? null : errorColor}
+							floatingLabelStyle={this.state.validEmailEntered ? null : errorColor}
+							floatingLabelFocusStyle={this.state.validEmailEntered ? null : errorColor}>
 						</TextField>
 						<br />
 						<TextField
@@ -178,7 +188,7 @@ export default class DialogExampleSimple extends React.Component {
 							label="Send"
 							primary={true}
 							onTouchTap={this.handleSend}
-							disabled = {!this.state.validEmailEntered}
+							disabled={!this.state.validEmailEntered}
 						/>,
 						<FlatButton
 							label="Cancel"
