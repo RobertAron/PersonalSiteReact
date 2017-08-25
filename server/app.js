@@ -36,6 +36,7 @@ app.post('/api/sendmail', (req, res) => {
 			pass: credentials.password
 		}
 	})
+	console.log("the auth is",credentials.from,credentials.password);
 	const mailOptions = {
 		from: body.from, // sender address
 		to: credentials.to, // list of receivers

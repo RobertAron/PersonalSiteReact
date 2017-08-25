@@ -111,7 +111,7 @@ export default class DialogExampleSimple extends React.Component {
 			})
 			.then((responseJson) => {
 				console.log(responseJson);
-				if (responseJson) {
+				if (responseJson.sent===true) {
 					this.setState({ dialogState: emailStateEnum.SENT });
 				} else {
 					this.setState({ dialogState: emailStateEnum.ERROR });
@@ -152,6 +152,7 @@ export default class DialogExampleSimple extends React.Component {
 						<TextField
 							floatingLabelText="Your Email Adress"
 							onChange={(newEvent, newValue) => {
+								theirEmail = newValue;
 								this.isValidEmail(newValue);
 							}}
 							underlineFocusStyle={this.state.validEmailEntered ? null : errorColor}
