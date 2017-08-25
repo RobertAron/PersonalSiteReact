@@ -16,11 +16,11 @@
 }
 
 .animated{
-    animation-duration: .6s;
+    animation-duration: .5s;
 }
 
 .fast-animated{
-    animation-duration: .4s;
+    animation-duration: .3s;
 }
 
 @keyframes bounceIn {

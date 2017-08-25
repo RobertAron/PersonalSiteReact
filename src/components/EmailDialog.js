@@ -128,7 +128,6 @@ export default class DialogExampleSimple extends React.Component {
 				return (
 					<div>
 						<TextField
-							hintText="Example_Email@Example.com"
 							floatingLabelText="Your Email Adress"
 							onChange={(newEvent, newValue) => {
 								this.isValidEmail(newValue);
