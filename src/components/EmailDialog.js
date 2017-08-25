@@ -37,11 +37,15 @@ export default class DialogExampleSimple extends React.Component {
 		dialogState: emailStateEnum.CONTENT
 	};
 	componentDidMount() {
-		this.setState({ validEmailEntered: false });
+		this.setState({
+			validEmailEntered: false,
+			validSubjectEntered: false,
+			validBodyEntered: false
+		});
 	}
 
 	isValidEmail = (email) => {
-		let regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		if (regex.test(email)) {
 			this.setState({ validEmailEntered: true });
 		}
@@ -49,6 +53,24 @@ export default class DialogExampleSimple extends React.Component {
 			this.setState({ validEmailEntered: false });
 		}
 		return (this.state.validEmailEntered);
+	}
+	isValidBody =(body)=>{
+		if(body===""){
+			this.setState({validBodyEntered:false});
+		}
+		else{
+			this.setState({validBodyEntered:true});
+		}
+		return(this.state.validBodyEntered);
+	}
+	isValidSubject = (subject)=>{
+		if(subject===""){
+			this.setState({validSubjectEntered:false});
+		}
+		else{
+			this.setState({validSubjectEntered:true});
+		}
+		return(this.state.validBodyEntered);
 	}
 	emailErrorMessage = () => {
 		if (this.state.validEmailEntered) {
@@ -135,24 +157,34 @@ export default class DialogExampleSimple extends React.Component {
 							underlineFocusStyle={this.state.validEmailEntered ? null : errorColor}
 							underlineStyle={this.state.validEmailEntered ? null : errorColor}
 							floatingLabelStyle={this.state.validEmailEntered ? null : errorColor}
-							floatingLabelFocusStyle={this.state.validEmailEntered ? null : errorColor}>
-						</TextField>
+							floatingLabelFocusStyle={this.state.validEmailEntered ? null : errorColor}
+						/>
 						<br />
 						<TextField
 							floatingLabelText="Subject"
 							onChange={(newEvent, newValue) => {
 								theirSubject = newValue;
-							}}>
-						</TextField>
+								this.isValidSubject(newValue);
+							}}
+							underlineFocusStyle={this.state.validSubjectEntered ? null : errorColor}
+							underlineStyle={this.state.validSubjectEntered ? null : errorColor}
+							floatingLabelStyle={this.state.validSubjectEntered ? null : errorColor}
+							floatingLabelFocusStyle={this.state.validSubjectEntered ? null : errorColor}
+						/>
 						<br />
 						<TextField
 							className="email-body"
 							floatingLabelText="Email Body"
 							multiLine={true}
 							onChange={(newEvent, newValue) => {
+								this.isValidBody(newValue);
 								theirBody = newValue;
 							}}
 							rows={4}
+							underlineFocusStyle={this.state.validBodyEntered ? null : errorColor}
+							underlineStyle={this.state.validBodyEntered ? null : errorColor}
+							floatingLabelStyle={this.state.validBodyEntered ? null : errorColor}
+							floatingLabelFocusStyle={this.state.validBodyEntered ? null : errorColor}
 						/>
 					</div>
 				)
@@ -187,7 +219,7 @@ export default class DialogExampleSimple extends React.Component {
 							label="Send"
 							primary={true}
 							onTouchTap={this.handleSend}
-							disabled={!this.state.validEmailEntered}
+							disabled={!this.state.validEmailEntered||!this.state.validBodyEntered||!this.state.validSubjectEntered}
 						/>,
 						<FlatButton
 							label="Cancel"
