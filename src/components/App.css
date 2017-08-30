@@ -11,3 +11,8 @@
     height: calc(100% - 64px);
     overflow-y: scroll;
 }
+
+.right-nav-buttons{
+    display: flex;
+    flex-direction: row;
+}

@@ -5,12 +5,12 @@ import './AppBar.css'
 import IconButton from 'material-ui/IconButton';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import Menu from 'material-ui/svg-icons/navigation/menu';
-import EmailDialog from './EmailDialog'
+
+import NavRightButtons from './NavRightButtons'
 
 
 
 export default class MyAppBar extends Component {
-
 	leftIconDecider = ()=>{
 		if (this.props.projectState){
 			return <IconButton href="/"><NavigationClose /></IconButton>;
@@ -33,7 +33,7 @@ export default class MyAppBar extends Component {
 					style={{ position: 'fixed' }}
 					title="Robert Aron"
 					iconElementLeft={this.leftIconDecider()}
-					iconElementRight={<EmailDialog/>}
+					iconElementRight={<NavRightButtons/>}
 				/>
 			</div>
 		);

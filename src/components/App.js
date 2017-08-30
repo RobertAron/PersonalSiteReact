@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import AppBar from '../containers/AppBarContainer'
 import ProjectApp from './ProjectApp'
 import ProjectDetails from '../containers/ProjectDetailsContainer'
+import About from '../containers/AboutContainer'
 
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
 				<div className="body-container">
 					<Route exact path='/' component={ProjectApp}/>
 					<Route exact path='/projects/:project' component={ProjectDetails}/>
+					<Route exact path='/about' component={About}/>
 				</div>
 			</div>
 		);
