@@ -13,7 +13,8 @@ const projects = [
             youtube: "cM09hWIPUqY",
             devpost: "https://devpost.com/software/eco-drivr"
 
-        }
+        },
+        date: 'Wed Jan 01 1992 00:00:00 GMT-0600 (Central Standard Time)'//use new Date((year),(month[0-11-]),(day)).toString();
     },
     {
         id: 2,
@@ -26,7 +27,8 @@ const projects = [
         tags: ["test1", "test3"],
         links: {
 
-        }
+        },
+        date: 'Wed Jan 01 1992 00:00:00 GMT-0600 (Central Standard Time)'//use new Date((year),(month[0-11-]),(day)).toString();
     },
     {
         id: 3,
@@ -39,7 +41,8 @@ const projects = [
         tags: ["test1", "test2"],
         links: {
 
-        }
+        },
+        date: 'Wed Jan 01 1992 00:00:00 GMT-0600 (Central Standard Time)'//use new Date((year),(month[0-11-]),(day)).toString();
     },
     {
         id: 4,
@@ -52,7 +55,8 @@ const projects = [
         tags: ["test6", "test2"],
         links: {
 
-        }
+        },
+        date: 'Wed Jan 01 1992 00:00:00 GMT-0600 (Central Standard Time)'//use new Date((year),(month[0-11-]),(day)).toString();
     },
     {
         id: 5,
@@ -66,7 +70,8 @@ const projects = [
         links: {
 
         },
-        video:"https://www.youtube.com/embed/dHg50mdODFM" 
+        video:"https://www.youtube.com/embed/dHg50mdODFM" ,
+        date: 'Wed Jan 01 1992 00:00:00 GMT-0600 (Central Standard Time)'//use new Date((year),(month[0-11-]),(day)).toString();
     },
     {
         id: 6,
@@ -79,7 +84,8 @@ const projects = [
         tags: ["test1", "test3"],
         links: {
 
-        }
+        },
+        date: 'Wed Jan 01 1992 00:00:00 GMT-0600 (Central Standard Time)'//use new Date((year),(month[0-11-]),(day)).toString();
     },
     {
         id: 7,
@@ -92,20 +98,22 @@ const projects = [
         tags: ["test1", "test2"],
         links: {
 
-        }
+        },
+        date: 'Wed Jan 01 1992 00:00:00 GMT-0600 (Central Standard Time)'//use new Date((year),(month[0-11-]),(day)).toString();
     },
     {
         id: 8,
         thumbnail: "https://i.imgur.com/P8lIeYU.jpg",
         images: ["https://i.imgur.com/0sPXWzT.jpg","https://i.imgur.com/6H9ow2P.jpg","https://i.imgur.com/QZ7COcc.jpg"],
-        projectTitle: "Evolve Pup",
+        projectTitle: "Most Recent Project",
         projectInfo: [["Overivew", "who knew such a small lil pup could turn into a larger pup wow what a g o o d b o i"],
         ["Sub Title 1", "here is some sub title stuff. It will talk about the catagory that the subtitle talked about"],
         ["Sub Title 2", "This is a bit more information that might explain some more things. Hopefully it clears stuff up"]],
         tags: ["test6", "test2"],
         links: {
 
-        }
+        },
+        date: "Thu Jan 01 2015 00:00:00 GMT-0600 (Central Standard Time)"
     }
 ]
 
