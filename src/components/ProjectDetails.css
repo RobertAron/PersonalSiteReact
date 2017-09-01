@@ -57,8 +57,13 @@
     }
 }
 .bounceIn {
-    animation-duration: .6s;
+    animation-duration: .8s;
     animation-name: bounceIn;   
+}
+
+.fadeIn{
+    animation-duration: .8s;
+    animation-name: fadeIn;   
 }
 
 @keyframes bounceIn {
@@ -117,3 +122,28 @@
     bottom: 0;
     right: 0;
 }
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fadeIn {
+    animation-name: fadeIn;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }

@@ -5,7 +5,7 @@ import Paper from 'material-ui/Paper';
 
 
 
-class ProjectDetails extends Component {
+class ProjectDetailsContent extends Component {
     constructor() {
         super()
         this.keyCount = 0;
@@ -55,13 +55,13 @@ class ProjectDetails extends Component {
 
     render() {
         return (
-            <div className="project-details-row">
-                <img alt={this.props.project.projectTitle} className="thumbnail bounceIn" src={this.props.project.thumbnail} />
-                <div className="project-details-column bounceIn">
+            <div className="project-details-row fadeIn">
+                <img alt={this.props.project.projectTitle} className="thumbnail" src={this.props.project.thumbnail} />
+                <div className="project-details-column">
                     {this.props.project.links.youtube === undefined ? null : this.renderYoutube()}
                     {this.renderProjectDescription()}
                 </div>
-                <div className="project-details-column bounceIn">
+                <div className="project-details-column">
                     {this.renderProjectPictures()}
                 </div>
             </div >
@@ -73,4 +73,4 @@ class ProjectDetails extends Component {
 
 
 
-export default ProjectDetails;
+export default ProjectDetailsContent;

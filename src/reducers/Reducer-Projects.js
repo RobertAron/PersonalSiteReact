@@ -113,7 +113,7 @@ const projects = [
         links: {
 
         },
-        date: "Thu Jan 01 2015 00:00:00 GMT-0600 (Central Standard Time)"
+        date: "Thu Jan 01 1990 00:00:00 GMT-0600 (Central Standard Time)"
     }
 ]
 
