@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "thumbnail": "../../res/projects/ecodash-thumb.png",
+        "images": [
+            "../../res/projects/ecodash-1.jpg",
+            "../../res/projects/ecodash-2.jpg"
+        ],
+        "projectTitle": "Eco-Dash",
+        "projectInfo": [
+            [
+                "Overview",
+                "Ecodash was a hackathon project for 'EARTH HACK'. It was the winner of Toyota Connected's 'Driver Interface' prize category. The application takes in real data -simulated in real time- and translates that data into a driver score. The score is determined by looking at the driver's vehicle speed, steering angle, and engine speed (RPM), and calculates a driving score based on how the driver is operating their vehicle."
+            ],
+            [
+                "Inspiration",
+                "We at Eco-Dash wanted to create an application that can run on the heads up display that would allow drivers to view their own driving habits and compare themselves against their community."
+            ],
+            [
+                "What it does",
+                "Eco-Dash reads in telemetry data from the cars numerous sensors, such as vehicle speed, steering angle, and engine speed (RPM), and calculates a driving score based on how the driver is operating their vehicle. The driver can also see their score based against their local community, friends, or many other options"
+            ],
+            [
+                "How we built it",
+                "The application is a fully functioning full stack web application (capable of being ported to an in car infotainment console). The front end UI is built primarily with React.js and React-RT-Chart.js for visualizations. This application will then talk to an express server running on a Node.js instance sitting inside of an AWS - EC2 Compute node."
+            ]
+        ],
+        "tags": [
+            "Software",
+            "Hackathon",
+            "React",
+            "MongoDB"
+        ],
+        "links": {
+            "github": "https://github.com/kolten/toyota-eco-dash",
+            "devpost": "https://devpost.com/software/eco-drivr"
+        },
+        "date": "Sun Apr 23 2017 00:00:00 GMT-0500 (Central Daylight Time)"
+    },
+    {
+        "id": 2,
+        "thumbnail": "../../res/projects/remix-me-thumb.png",
+        "images": [
+            "../../res/projects/remix-me-0.jpg",
+            "../../res/projects/remix-me-1.jpg",
+            "../../res/projects/remix-me-2.jpg",
+            "../../res/projects/remix-me-3.jpg"
+        ],
+        "projectTitle": "Remix.Me",
+        "projectInfo": [
+            [
+                "Overview",
+                "Remix.Me was a hackthon project for SXSW's 2017 Music Hackathon. The project was designed for the implementation of Socan's API - A performing rights organization. The project helps remix artists compete in remix copetitions by placing them in a head to head competition with other remixer's of the same track."
+            ],
+            [
+                "Inspiration",
+                "It can be difficult for upcoming artists to be noticed. Even those with a lot of talent and skill can be easily overlooked in the sea of voices wanting to be heard. We help those with the passion to create high-quality music stand out in the crowd."
+            ],
+            [
+                "What It Does",
+                "Remix.Me provides a platform in which musicians can browse through a category of remix contests. Once they've chosen one, they can enter the competition and compete. In order to complete their submission, though, they must work with us to help determine which remixes are the highest quality. This is done in a blind tournament style, in which community members vote for which contest they believe is best."
+            ]
+        ],
+        "tags": [
+            "React",
+            "MongoDB",
+            "Software",
+            "Hackathon"
+        ],
+        "links": {
+            "github": "https://github.com/SXSWMusikathon/MusikathonApp",
+            "devpost": "https://devpost.com/software/remix-me"
+        },
+        "date": "Wed Mar 15 2017 00:00:00 GMT-0500 (Central Daylight Time)"
+    },
+    {
+        "id": 2,
+        "thumbnail": "../../res/projects/ecodash-thumb.png",
+        "images": [
+            "../../res/projects/ecodash-1.jpg",
+            "../../res/projects/ecodash-2.jpg"
+        ],
+        "projectTitle": "Ecoo-Dash",
+        "projectInfo": [
+            [
+                "Overview",
+                "Ecodash was a hackathon project for 'EARTH HACK'. It was the winner of Toyota Connected's 'Driver Interface' prize category. The application takes in real data -simulated in real time- and translates that data into a driver score. The score is determined by looking at the driver's vehicle speed, steering angle, and engine speed (RPM), and calculates a driving score based on how the driver is operating their vehicle."
+            ],
+            [
+                "Sub Title 1",
+                "here is some sub title stuff. It will talk about the catagory that the subtitle talked about"
+            ],
+            [
+                "Sub Title 2",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elementum arcu vitae turpis viverra, eget facilisis sem iaculis. Curabitur finibus eros at elit elementum, eu varius nisi tincidunt. Quisque odio sapien, viverra id turpis id, dictum semper dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc velit lacus, fringilla eu nunc in, blandit imperdiet ligula. Etiam vestibulum, urna ut congue pellentesque, metus augue tempus quam, vel luctus ante diam porta libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus, enim vitae sollicitudin auctor, sem dui finibus orci, quis efficitur nunc est at felis. Duis dictum elit non purus semper feugiat. Nam iaculis felis non tortor accumsan, et grava enim consectetur. Aenean at ligula odio. Maecenas placerat non justo varius viverra. Nullam gra tortor sit amet pellentesque grava. Quisque tristique enim ornare, ultricies velit non, fermentum mauris. Sed eros lectus, lacinia eu nulla quis, mattis condimentum ex. Vestibulum fermentum justo vitae velit iaculis venenatis. Pellentesque vel accumsan mauris, posuere sagittis diam. Maecenas hendrerit quam risus, ac fermentum urna feugiat eget. Suspendisse consectetur malesuada lorem, ac pulvinar nunc tincunt vel. Sed."
+            ]
+        ],
+        "tags": [
+            "test1",
+            "test2"
+        ],
+        "links": {
+            "github": "https://github.com/RobertAron/JuceCustomGraphics",
+            "youtube": "cM09hWIPUqY",
+            "devpost": "https://devpost.com/software/eco-drivr"
+        },
+        "video": "https://www.youtube.com/embed/dHg50mdODFM",
+        "date": "Wed Jan 01 1992 00:00:00 GMT-0600 (Central Standard Time)"
+    }
+]

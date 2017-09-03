@@ -29,7 +29,7 @@ class ProjectList extends Component{
             const Date1 = new Date(project1.date);
             console.log(project1.date);
             const Date2 = new Date(project2.date);
-            return Date1.valueOf() - Date2.valueOf();
+            return Date2.valueOf()-Date1.valueOf();
         });
         console.log(filteredProjects);
 
