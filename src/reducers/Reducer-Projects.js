@@ -6,8 +6,8 @@ const tags = [
     ["Hackathon", false, false],
     ["React", false, false],
     ["MongoDB", false, false],
-    ["test5", false, false],
-    ["test6", false, false]
+    ["Audio", false, false],
+    ["Music", false, false]
 ]
 
 

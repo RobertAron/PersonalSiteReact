@@ -96,13 +96,41 @@
             ]
         ],
         "tags": [
-            "Software"
+            "Software",
+            "Hackathon"
         ],
         "links": {
             "github": "https://github.com/RobertAron/Rock-Paper-Jibo/",
             "devpost": "https://devpost.com/software/jibo-fam"
         },
-        "date": "Wed Nov 15 2017 00:00:00 GMT-0600 (Central Standard Time)"
+        "date": "Wed Nov 15 2016 00:00:00 GMT-0600 (Central Standard Time)"
+    },
+    {
+        "id": 4,
+        "thumbnail": "../../res/projects/who-we-are-thumb.jpg",
+        "images": [
+            "../../res/projects/who-we-are-1.jpg",
+            "../../res/projects/who-we-are-2.png"
+        ],
+        "projectTitle": "Who We Are",
+        "projectInfo": [
+            [
+                "Overview",
+                "'Who We Are' is a short video to promote the Dallas film crew. The project was showcased at the Dallas film crew's 2017 premier and is currently used recruitment for the organization. My contribution to the film was the narration recording and film score."
+            ],
+            [
+                "Production",
+                "I was contacted by the Dallas Film Crew to help with the production on their trailer/recruitment video. When I joined production the film was in picture lock and needed narration and music. We brought Elissa Annette into my home studio and recorded the narration. The score was inspired with the idea of starting something small and growing into a huge production. The score accomplishes this by starting with a simple piano melody but growing into a full orchestral texture."
+            ]
+        ],
+        "tags": [
+            "Audio",
+            "Music"
+        ],
+        "links": {
+            "youtube": "ZvWOEwXFpOU"
+        },
+        "date": "Wed Jan 01 1992 00:00:00 GMT-0600 (Central Standard Time)"
     },
     {
         "id": 50,
