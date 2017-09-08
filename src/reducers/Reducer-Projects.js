@@ -4,7 +4,7 @@ const tags = [
     //tootlip disabled checked
     ["Software", false, false],
     ["Hackathon", false, false],
-    ["React", false, false],
+    ["Web", false, false],
     ["MongoDB", false, false],
     ["Audio", false, false],
     ["Music", false, false]

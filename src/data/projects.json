@@ -28,7 +28,7 @@
         "tags": [
             "Software",
             "Hackathon",
-            "React",
+            "Web",
             "MongoDB"
         ],
         "links": {
@@ -62,7 +62,7 @@
             ]
         ],
         "tags": [
-            "React",
+            "Web",
             "MongoDB",
             "Software",
             "Hackathon"
@@ -130,7 +130,34 @@
         "links": {
             "youtube": "ZvWOEwXFpOU"
         },
-        "date": "Wed Jan 01 1992 00:00:00 GMT-0600 (Central Standard Time)"
+        "date": "Wed Jul 17 2017 00:00:00 GMT-0600 (Central Standard Time)"
+    },
+    {
+        "id": 5,
+        "thumbnail": "../../res/projects/Response-Variable-thumb.jpg",
+        "images": [
+            "../../res/projects/Response-Variable-02.jpg",
+            "../../res/projects/Response-Variable-01.jpg"
+        ],
+        "projectTitle": "Response Variable",
+        "projectInfo": [
+            [
+                "Overview",
+                "'Response Variable' is a short electro track used to showcase FL Studio's then newly implemented live performance mode. The track won Image Line's live performance contest."
+            ],
+            [
+                "Production",
+                "The track was developed using FL Studio's beta version of live performance mode. The main motivation behind the track was to make a song that was interesting to listen to, and also interesting to watch be performed. Short audio cips were used that could be repeated in multiple areas throughout the track. Overall the track grew into multiple sample pages in order to transition fully through different sections of the song. A piano interlude in the break of the track, as well as added to the final drop in order to finish the track in a way that feel meaningful and not too repetitive."
+            ]
+        ],
+        "tags": [
+            "Audio",
+            "Music"
+        ],
+        "links": {
+            "youtube": "CJEPYRIMlDg"
+        },
+        "date": "Fri Dec 21 2012 00:00:00 GMT-0600 (Central Standard Time)"
     },
     {
         "id": 50,
