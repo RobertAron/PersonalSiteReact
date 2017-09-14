@@ -160,6 +160,37 @@
         "date": "Fri Dec 21 2012 00:00:00 GMT-0600 (Central Standard Time)"
     },
     {
+        "id": 6,
+        "thumbnail": "../../res/projects/uta-now-thumb.png",
+        "images": [
+            "../../res/projects/uta-now-1.png",
+            "../../res/projects/uta-now-2.png",
+            "../../res/projects/uta-now-3.png"
+        ],
+        "projectTitle": "UTA Now",
+        "projectInfo": [
+            [
+                "Overview",
+                "UTA Now is a phone application that allows students to find out what is going on around UTA. As an organizer, the app allows you to share upcoming events and information about when and where they'll take place. As a user the app allows you to see events that will happen soon around UTA and get information about what those events are about."
+            ],
+            [
+                "Inspiration",
+                "UTA has a wide range of clubs and events that happen on and around campus. Due to the overwhelming number clubs it can sometimes be hard to track down where and when events are happening. UTA Now allows you to see events that are coming up in the near future in an organized way thats simple to navigate. You can sign up through Facebook in order to place comments on events, or just browse the catalog without an account."
+            ],
+            [
+                "Development",
+                "UTA Now was developed using the agile methodology. Two teams were formed to work on the native Android development and native IOS development. The backend was developed using firebase, a startup database developed by Google. Facebook login was implemented to allow ease of use. Logging in allows the user to comment on upcoming events and favorite events. This information is stored on the server's and transferred between devices."
+            ]
+        ],
+        "tags": [
+            "Software"
+        ],
+        "links": {
+            "github": "https://github.com/RobertAron/UTANow-Android"
+        },
+        "date": "Tue Apr 05 2016 00:00:00 GMT-0600 (Central Standard Time)"
+    },
+    {
         "id": 50,
         "thumbnail": "../../res/projects/ecodash-thumb.png",
         "images": [
