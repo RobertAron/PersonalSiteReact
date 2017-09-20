@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import EmailDialog from './EmailDialog'
 import FlatButton from 'material-ui/FlatButton';
+import { Link } from 'react-router-dom'
 
 
 
@@ -9,7 +10,9 @@ export default class NavRightButtons extends Component {
     render(){
         return(
             <div className="right-nav-buttons">
-                <FlatButton href='/about' {...this.props} label="About"/>
+                <Link to='/about'>
+                    <FlatButton {...this.props} label="About"/>
+                </Link>
                 <EmailDialog  {...this.props} />
             </div>
         )
