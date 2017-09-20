@@ -5,15 +5,17 @@ import './AppBar.css'
 import IconButton from 'material-ui/IconButton';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import Menu from 'material-ui/svg-icons/navigation/menu';
-
+import { Link } from 'react-router-dom'
 import NavRightButtons from './NavRightButtons'
 
 
 
 export default class MyAppBar extends Component {
+	
 	leftIconDecider = ()=>{
+		//TODO: this isn't quite right but i'm not sure the correct way to pass it
 		if (this.props.projectState){
-			return <IconButton href="/"><NavigationClose /></IconButton>;
+			return <Link to='/'><IconButton iconStyle={{color:'white'}}><NavigationClose/></IconButton></Link>;
 		}
 		else{
 			return <IconButton><Menu /></IconButton>;
@@ -22,7 +24,7 @@ export default class MyAppBar extends Component {
 
 
 	handleToggle = () => {
-		this.props.toggleDrawer();
+		if(!this.props.projectState)this.props.toggleDrawer();
 	}
 
 	render() {

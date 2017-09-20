@@ -4,7 +4,8 @@ import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import './ProjectCard.css';
 import FontIcon from 'material-ui/FontIcon';
-import {black, red900} from 'material-ui/styles/colors';
+import { black, red900 } from 'material-ui/styles/colors';
+import { Link } from 'react-router-dom'
 
 
 
@@ -34,13 +35,13 @@ export default class PopoverExampleSimple extends React.Component {
     };
 
     createMenuList() {
-        return(Object.keys(this.props.projectLinks).map((key, value) => {
+        return (Object.keys(this.props.projectLinks).map((key, value) => {
             switch (key) {
                 case "github":
                     return (
                         <MenuItem primaryText={key}
                             key={key}
-                            leftIcon={<FontIcon className="fa fa-github" color={black}/>}
+                            leftIcon={<FontIcon className="fa fa-github" color={black} />}
                             href={this.props.projectLinks.github}
                             target="_blank"
                             onTouchTap={this.handleRequestClose} />
@@ -49,8 +50,8 @@ export default class PopoverExampleSimple extends React.Component {
                     return (
                         <MenuItem primaryText={key}
                             key={key}
-                            leftIcon={<FontIcon className="fa fa-youtube" color={red900}/>}
-                            href={"https://youtu.be/"+this.props.projectLinks.youtube}
+                            leftIcon={<FontIcon className="fa fa-youtube" color={red900} />}
+                            href={"https://youtu.be/" + this.props.projectLinks.youtube}
                             target="_blank"
                             onTouchTap={this.handleRequestClose} />
                     )
@@ -58,7 +59,7 @@ export default class PopoverExampleSimple extends React.Component {
                     return (
                         <MenuItem primaryText={key}
                             key={key}
-                            leftIcon={<img src='../../res/DevpostIcon.svg' alt="devpost"/>}
+                            leftIcon={<img src='../../res/DevpostIcon.svg' alt="devpost" />}
                             href={this.props.projectLinks.devpost}
                             target="_blank"
                             onTouchTap={this.handleRequestClose} />
@@ -67,7 +68,7 @@ export default class PopoverExampleSimple extends React.Component {
                     return (
                         <MenuItem primaryText={key}
                             key={key}
-                            leftIcon={<FontIcon className="fa fa-globe" color={black}/>}
+                            leftIcon={<FontIcon className="fa fa-globe" color={black} />}
                             href={this.props.projectLinks.key}
                             target="_blank"
                             onTouchTap={this.handleRequestClose} />
@@ -95,12 +96,13 @@ export default class PopoverExampleSimple extends React.Component {
                     onRequestClose={this.handleRequestClose}
                 >
                     <Menu disableAutoFocus={true}>
-                        <MenuItem
-                            primaryText="Learn More"
-                            key="Learn More"
-                            leftIcon={<img src="../../res/icons/mipmap-xxhdpi/ic_launcher.png" alt="local"/>}
-                            href={"/projects/"+this.props.title}
-                            onTouchTap={this.handleRequestClose} />
+                        <Link to={"/projects/" + this.props.title}>
+                            <MenuItem
+                                primaryText="Learn More"
+                                key="Learn More"
+                                leftIcon={<img src="../../res/icons/mipmap-xxhdpi/ic_launcher.png" alt="local" />}
+                                onTouchTap={this.handleRequestClose} />
+                        </Link>
                         {this.createMenuList()}
                     </Menu>
                 </Popover>
