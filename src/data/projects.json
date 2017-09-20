@@ -190,6 +190,32 @@
         "date": "Tue Apr 05 2016 00:00:00 GMT-0600 (Central Standard Time)"
     },
     {
+        "id": 7,
+        "thumbnail": "../../res/projects/smartAlarm-thumb.jpg",
+        "images": [
+            "../../res/projects/smartAlarm-1.jpg"
+        ],
+        "projectTitle": "Never Late:Smart Alarm",
+        "projectInfo": [
+            [
+                "Overview",
+                "SmartAlarm takes in multiple real world data points, such as weather, traffic, user sleep cycles, and user travel history, to determine an optimal time to set an alarm. The user simply enters a destination and a time they'd like to arrive, and our app takes care of the rest."
+            ],
+            [
+                "How Does It Work",
+                "Our app is a native Android application. We use several Google Play services such as Google-Places and the Google-Distance-Matrix, we also use forecast.io for real time weather data."
+            ]
+        ],
+        "tags": [
+            "Software",
+            "Hackathon"
+        ],
+        "links": {
+            "github": "https://github.com/Kevin-Chung/Smart-Alarm-Android-App"
+        },
+        "date": "Fri Sep 09 2016 00:00:00 GMT-0600 (Central Standard Time)"
+    },
+    {
         "id": 50,
         "thumbnail": "../../res/projects/ecodash-thumb.png",
         "images": [
