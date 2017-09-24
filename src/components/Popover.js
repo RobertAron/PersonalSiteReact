@@ -94,6 +94,7 @@ export default class PopoverExampleSimple extends React.Component {
                     anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
                     targetOrigin={{ horizontal: 'left', vertical: 'top' }}
                     onRequestClose={this.handleRequestClose}
+                    
                 >
                     <Menu disableAutoFocus={true}>
                         <Link to={"/projects/" + this.props.title}>
