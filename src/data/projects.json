@@ -216,6 +216,31 @@
         "date": "Fri Sep 09 2016 00:00:00 GMT-0600 (Central Standard Time)"
     },
     {
+        "id": 8,
+        "thumbnail": "../../res/projects/shooting-star-thumb.jpg",
+        "images": [
+            "../../res/projects/shooting-star-1.jpg"
+        ],
+        "projectTitle": "Shooting Star",
+        "projectInfo": [
+            [
+                "Overview",
+                "Shooting Star is a future bass electronic track. The track features an uplifting meleody accompanied by cute percussion elements."
+            ],
+            [
+                "Future Bass Elements",
+                "Future bass is a genre that has fairly defined standards. Chords elements are usually whips - elements with fairly long attack times, that effect an opening filter. Short, punchy and clear drums are almost universally used. These punchy elements cut even more through the track due to heavy use of side chaining. Vocal chops are also frequently used to fill out the track rhythmically. Finally, leads melodies usually have simple structures but are catchy in nature."
+            ]
+        ],
+        "tags": [
+            "Music"
+        ],
+        "links": {
+            "youtube": "PVmCiVLR7dY"
+        },
+        "date": "Sun Sep 10 2017 00:00:00 GMT-0600 (Central Standard Time)"
+    },
+    {
         "id": 50,
         "thumbnail": "../../res/projects/ecodash-thumb.png",
         "images": [

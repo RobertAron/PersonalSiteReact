@@ -13,7 +13,6 @@ import NavRightButtons from './NavRightButtons'
 class MyAppBar extends Component {
 	
 	leftIconDecider = ()=>{
-		//TODO: this isn't quite right but i'm not sure the correct way to pass it
 		if (this.props.projectState){
 			return <Link to='/'><IconButton iconStyle={this.props.muiTheme.raisedButton}><NavigationClose/></IconButton></Link>;
 		}
