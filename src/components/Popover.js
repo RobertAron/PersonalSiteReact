@@ -65,6 +65,9 @@ export default class PopoverExampleSimple extends React.Component {
                             onTouchTap={this.handleRequestClose} />
                     )
                 default:
+                //TODO: this one is bugged
+                    console.log("Default",this.props.projectLinks)
+                    console.log(key)
                     return (
                         <MenuItem primaryText={key}
                             key={key}

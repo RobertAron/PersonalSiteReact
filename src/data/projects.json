@@ -107,10 +107,10 @@
     },
     {
         "id": 4,
-        "thumbnail": "../../res/projects/who-we-are-thumb.jpg",
+        "thumbnail": "../../res/projects/who-we-are-thumb.png",
         "images": [
             "../../res/projects/who-we-are-1.jpg",
-            "../../res/projects/who-we-are-2.png"
+            "../../res/projects/who-we-are-2.jpg"
         ],
         "projectTitle": "Who We Are",
         "projectInfo": [
@@ -195,7 +195,7 @@
         "images": [
             "../../res/projects/smartAlarm-1.jpg"
         ],
-        "projectTitle": "Never Late:Smart Alarm",
+        "projectTitle": "Smart Alarm",
         "projectInfo": [
             [
                 "Overview",
