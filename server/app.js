@@ -1,5 +1,6 @@
 // server/app.js
-const credentials = require('./credentials').credentials;
+//const credentials = require('./credentials').credentials;
+
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
@@ -8,7 +9,9 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const app = express();
-
+if (process.env.NODE_ENV !== 'production') {
+	require('dotenv').load();
+}
 // Setup logger
 app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms'));
 
@@ -32,14 +35,14 @@ app.post('/api/sendmail', (req, res) => {
 	const transporter = nodemailer.createTransport({
 		service: 'Gmail',
 		auth: {
-			user: credentials.from,
-			pass: credentials.password
+			user: process.env.from,
+			pass: process.env.password
 		}
 	})
-	console.log("the auth is",credentials.from,credentials.password);
+	console.log("the auth is",process.env.from,process.env.password);
 	const mailOptions = {
 		from: body.from, // sender address
-		to: credentials.to, // list of receivers
+		to: process.env.to, // list of receivers
 		subject: body.subject, // Subject line
 		text: body.from + " \n" + body.body //, // plaintext body
 	}

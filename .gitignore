@@ -24,3 +24,4 @@ yarn-error.log*
 #credentials
 /server/credentials.js
 src/data/projectItemFake.json
+.env
