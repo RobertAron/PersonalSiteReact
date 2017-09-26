@@ -96,6 +96,7 @@ export default class DialogExampleSimple extends React.Component {
 			body: theirBody
 		})
 		console.log(myBody);
+		console.log("using this url",url)
 		fetch(url + '/api/sendmail', {
 			method: 'POST',
 			headers: {
