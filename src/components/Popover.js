@@ -81,7 +81,6 @@ export default class PopoverExampleSimple extends React.Component {
     }
 
     render() {
-        this.createMenuList()
         return (
             <div>
                 <div className="project-fab-container"
