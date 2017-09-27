@@ -44,7 +44,6 @@ class ProjectDetailsContent extends Component {
     }
 
     renderYoutube() {
-        console.log(this.props.project);
         return (
             <div className="shadow">
                 <div className="youtube-container" >

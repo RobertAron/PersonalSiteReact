@@ -89,14 +89,11 @@ export default class DialogExampleSimple extends React.Component {
 		this.setState({ open: false });
 	};
 	handleSend = () => {
-		console.log("in handle send");
 		const myBody = JSON.stringify({
 			from: theirEmail,
 			subject: theirSubject,
 			body: theirBody
 		})
-		console.log(myBody);
-		console.log("using this url",url)
 		fetch(url + '/api/sendmail', {
 			method: 'POST',
 			headers: {
@@ -106,11 +103,9 @@ export default class DialogExampleSimple extends React.Component {
 			body: myBody
 		})
 			.then((response) => {
-				console.log(response);
 				return response.json();
 			})
 			.then((responseJson) => {
-				console.log(responseJson);
 				if (responseJson.sent===true) {
 					this.setState({ dialogState: emailStateEnum.SENT });
 				} else {

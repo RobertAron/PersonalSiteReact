@@ -29,7 +29,6 @@ app.get('*', (req, res) => {
 });
 
 app.post('/api/sendmail', (req, res) => {
-	console.log(req.body);
 	let body = req.body
 
 	const transporter = nodemailer.createTransport({
@@ -39,7 +38,6 @@ app.post('/api/sendmail', (req, res) => {
 			pass: process.env.password
 		}
 	})
-	console.log("the auth is",process.env.from,process.env.password);
 	const mailOptions = {
 		from: body.from, // sender address
 		to: process.env.to, // list of receivers

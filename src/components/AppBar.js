@@ -27,8 +27,6 @@ class MyAppBar extends Component {
 	}
 
 	render() {
-		console.log("mui theme");
-		console.log(this.props.muiTheme.raisedButton);
 		return (
 			<div className="app-bar">
 				<AppBar

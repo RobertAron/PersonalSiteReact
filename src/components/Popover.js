@@ -66,8 +66,6 @@ export default class PopoverExampleSimple extends React.Component {
                     )
                 default:
                 //TODO: this one is bugged
-                    console.log("Default",this.props.projectLinks)
-                    console.log(key)
                     return (
                         <MenuItem primaryText={key}
                             key={key}
@@ -84,7 +82,7 @@ export default class PopoverExampleSimple extends React.Component {
         return (
             <div>
                 <div className="project-fab-container"
-                    onTouchTap={this.handleTouchTap}>
+                    onClick={this.handleTouchTap}>
                     <div className="project-fab fast-animated">
                         {/*TODO replace with menu/icon menu*/}
                         <i className="material-icons">more_vert</i>

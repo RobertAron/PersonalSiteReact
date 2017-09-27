@@ -7,7 +7,6 @@ import Drawer from '../containers/DrawerContainer'
 
 class ProjectApp extends Component {
 
-    
 
 
     render() {

@@ -27,7 +27,6 @@ class ProjectList extends Component{
             return true;
         }).sort((project1,project2)=>{
             const Date1 = new Date(project1.date);
-            console.log(project1.date);
             const Date2 = new Date(project2.date);
             return Date2.valueOf()-Date1.valueOf();
         });

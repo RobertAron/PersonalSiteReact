@@ -23,7 +23,6 @@ class ProjectCard extends Component {
 	}
 
 	render() {
-		console.log(this.props);
 		return (
 			<div className="project-card animated bounceIn">
 				<Link to={"/projects/"+this.props.project.projectTitle}>
