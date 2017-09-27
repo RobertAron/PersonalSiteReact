@@ -16,7 +16,11 @@ export default class PopoverExampleSimple extends React.Component {
         this.state = {
             open: false,
         };
-        this.scrollableContainer = document.getElementById('scrollableContainer');
+    }
+
+    componentDidMount(){
+        const scrollableContainer = document.getElementById("scrollableContainer");
+        console.log(typeof(scrollableContainer));
     }
 
     handleTouchTap = (event) => {
@@ -81,7 +85,7 @@ export default class PopoverExampleSimple extends React.Component {
 
     render() {
         return (
-            <div>
+            <div ref='listArea'>
                 <div className="project-fab-container"
                     onClick={this.handleTouchTap}>
                     <div className="project-fab fast-animated">
@@ -95,7 +99,6 @@ export default class PopoverExampleSimple extends React.Component {
                     anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
                     targetOrigin={{ horizontal: 'left', vertical: 'top' }}
                     onRequestClose={this.handleRequestClose}
-                    scrollableContainer = {this.scrollableContainer}
                 >
                     <Menu>
                         <Link to={"/projects/" + this.props.title}>

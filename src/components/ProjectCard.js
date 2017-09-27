@@ -38,7 +38,7 @@ class ProjectCard extends Component {
 					</p>
 				</div>
 				</Link>
-				<Popover title={this.projectTitle} projectLinks ={this.props.project.links}/>
+				<Popover title={this.projectTitle} projectLinks={this.props.project.links}/>
 			</div>
 		);
 	}

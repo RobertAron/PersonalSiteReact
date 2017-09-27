@@ -13,7 +13,7 @@ class ProjectApp extends Component {
         return(
             <div>
                 <Drawer />
-                <ProjectList />
+                <ProjectList/>
             </div>
         )
     }
