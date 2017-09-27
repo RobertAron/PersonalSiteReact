@@ -5,6 +5,7 @@ import AppBar from '../containers/AppBarContainer'
 import ProjectApp from './ProjectApp'
 import ProjectDetails from '../containers/ProjectDetailsContainer'
 import About from '../containers/AboutContainer'
+import { withRouter} from 'react-router-dom';
 
 function handleUpdate() {
     console.log("updating page");
@@ -13,11 +14,19 @@ function handleUpdate() {
 
 class App extends Component {
 
+
+	componentDidUpdate(prevProps) {
+        
+      if (this.props.location !== prevProps.location) {
+		  this.mainComponent.scrollTop = 0;
+      }
+    }
+
 	render() {
 		return (
 			<div className="app">
 				<AppBar/>
-				<div className="body-container">
+				<div ref={(div) => { this.mainComponent = div; }} className="body-container">
 					<Route exact path='/' onUpdate={handleUpdate} component={ProjectApp}/>
 					<Route exact path='/projects/:project' onUpdate={handleUpdate} component={ProjectDetails}/>
 					<Route exact path='/about' onUpdate={handleUpdate} component={About}/>
@@ -29,4 +38,4 @@ class App extends Component {
 
 
 
-export default App;
+export default withRouter(App);

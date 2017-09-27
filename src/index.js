@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
-import { BrowserRouter, Route , Router} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { createStore } from 'redux';
 import allReducers from './reducers';
 import { Provider } from 'react-redux';
-import ScrollToTop from './components/ScrollToTop'
 
 
 
@@ -35,16 +34,14 @@ const muiTheme = getMuiTheme({
 
 function handleUpdate() {
     console.log("updating page");
-    document.body.scrollTop = 0;    
+    document.body.scrollTop = 0;
 }
 
 ReactDOM.render(
     <MuiThemeProvider muiTheme={muiTheme}>
         <Provider store={store}>
             <BrowserRouter onUpdate={handleUpdate}>
-                <ScrollToTop>
-                    <App/>
-                </ScrollToTop>
+                <App />
             </BrowserRouter>
         </Provider>
     </MuiThemeProvider>,
