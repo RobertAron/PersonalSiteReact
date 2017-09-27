@@ -16,6 +16,7 @@ export default class PopoverExampleSimple extends React.Component {
         this.state = {
             open: false,
         };
+        this.scrollableContainer = document.getElementById('scrollableContainer');
     }
 
     handleTouchTap = (event) => {
@@ -94,9 +95,9 @@ export default class PopoverExampleSimple extends React.Component {
                     anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
                     targetOrigin={{ horizontal: 'left', vertical: 'top' }}
                     onRequestClose={this.handleRequestClose}
-                    
+                    scrollableContainer = {this.scrollableContainer}
                 >
-                    <Menu disableAutoFocus={true}>
+                    <Menu>
                         <Link to={"/projects/" + this.props.title}>
                             <MenuItem
                                 primaryText="Learn More"

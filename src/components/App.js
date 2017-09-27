@@ -18,7 +18,7 @@ class App extends Component {
 	componentDidUpdate(prevProps) {
         
       if (this.props.location !== prevProps.location) {
-		  this.mainComponent.scrollTop = 0;
+		  this.scrollableContainer.scrollTop = 0;
       }
     }
 
@@ -26,7 +26,7 @@ class App extends Component {
 		return (
 			<div className="app">
 				<AppBar/>
-				<div ref={(div) => { this.mainComponent = div; }} className="body-container">
+				<div id="scrollableContainer" ref={(div) => { this.scrollableContainer = div; }} className="body-container">
 					<Route exact path='/' onUpdate={handleUpdate} component={ProjectApp}/>
 					<Route exact path='/projects/:project' onUpdate={handleUpdate} component={ProjectDetails}/>
 					<Route exact path='/about' onUpdate={handleUpdate} component={About}/>
