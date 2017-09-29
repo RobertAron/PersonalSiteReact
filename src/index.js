@@ -18,7 +18,7 @@ injectTapEventPlugin();
 
 const store = createStore(allReducers);
 store.subscribe(() => {
-    console.log("DEBUG STORE", store.getState());
+    // console.log("DEBUG STORE", store.getState());
 })
 
 const muiTheme = getMuiTheme({
@@ -32,15 +32,11 @@ const muiTheme = getMuiTheme({
     }
 })
 
-function handleUpdate() {
-    console.log("updating page");
-    document.body.scrollTop = 0;
-}
 
 ReactDOM.render(
     <MuiThemeProvider muiTheme={muiTheme}>
         <Provider store={store}>
-            <BrowserRouter onUpdate={handleUpdate}>
+            <BrowserRouter>
                 <App />
             </BrowserRouter>
         </Provider>

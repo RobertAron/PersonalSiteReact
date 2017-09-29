@@ -18,10 +18,6 @@ export default class PopoverExampleSimple extends React.Component {
         };
     }
 
-    componentDidMount(){
-        const scrollableContainer = document.getElementById("scrollableContainer");
-        console.log(typeof(scrollableContainer));
-    }
 
     handleTouchTap = (event) => {
         // This prevents ghost click.

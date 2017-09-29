@@ -13,12 +13,12 @@ import ReactTooltip from 'react-tooltip'
 
 export default class DrawerUndockedExample extends React.Component {
 
-	constructor(props){
+	constructor(props) {
 		super(props);
 		this.checkbox = {
-    		margin: 12,
-			width:'calc(100%-24px)'
-  		}
+			margin: 12,
+			width: 'calc(100%-24px)'
+		}
 	}
 
 
@@ -46,7 +46,7 @@ export default class DrawerUndockedExample extends React.Component {
 					onRequestChange={(open) => this.props.toggleDrawer()}
 				>
 					<h1 className="center">Filters</h1>
-					<Divider/>
+					<Divider />
 
 					{this.createFilterList()}
 					<IconButton
@@ -65,16 +65,16 @@ export default class DrawerUndockedExample extends React.Component {
 
 
 
-	createFilterList(){
-		return this.props.tags.map((tag)=>{
-			return(
+	createFilterList() {
+		return this.props.tags.map((tag) => {
+			return (
 				<div key={tag[0]}>
-					<Checkbox checked={tag[2]} data-tip={tag[2]} label={tag[0]} disabled={tag[1]} style={this.checkbox} onCheck={()=>this.props.toggleTag(tag[0])}/>
-					<ReactTooltip place="right" type="dark" effect="solid"/>
+					<Checkbox checked={tag[2]} data-tip={tag[2]} label={tag[0]} disabled={tag[1]} style={this.checkbox} onCheck={() => this.props.toggleTag(tag[0])} />
+					<ReactTooltip place="right" type="dark" effect="solid" />
 				</div>
 			)
 		})
 
-		
+
 	}
 }

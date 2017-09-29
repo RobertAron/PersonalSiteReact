@@ -30,7 +30,6 @@ class ProjectList extends Component{
             const Date2 = new Date(project2.date);
             return Date2.valueOf()-Date1.valueOf();
         });
-        console.log(filteredProjects);
 
         return filteredProjects.map((project)=>{
             return(

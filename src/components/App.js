@@ -8,7 +8,6 @@ import About from '../containers/AboutContainer'
 import { withRouter} from 'react-router-dom';
 
 function handleUpdate() {
-    console.log("updating page");
     document.body.scrollTop = 0;    
 }
 
