@@ -44,6 +44,7 @@ export default class DrawerUndockedExample extends React.Component {
 					width={200}
 					open={this.props.open}
 					onRequestChange={(open) => this.props.toggleDrawer()}
+					overlayClassName="overlay"
 				>
 					<h1 className="center">Filters</h1>
 					<Divider />

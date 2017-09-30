@@ -7,28 +7,25 @@ import ProjectDetails from '../containers/ProjectDetailsContainer'
 import About from '../containers/AboutContainer'
 import { withRouter} from 'react-router-dom';
 
-function handleUpdate() {
-    document.body.scrollTop = 0;    
-}
+
 
 class App extends Component {
-
 
 	componentDidUpdate(prevProps) {
         
       if (this.props.location !== prevProps.location) {
-		  this.refs.scrollableContainer.scrollTop = 0;
+		window.scrollTo(0,0);
       }
     }
 
 	render() {
 		return (
-			<div className="app">
+			<div id="app" className="app">
 				<AppBar/>
 				<div id='scrollableContainer' ref='scrollableContainer' className="body-container">
-					<Route exact path='/' onUpdate={handleUpdate} component={ProjectApp} params={this.scrollableContainer}/>
-					<Route exact path='/projects/:project' onUpdate={handleUpdate} component={ProjectDetails}/>
-					<Route exact path='/about' onUpdate={handleUpdate} component={About}/>
+					<Route exact path='/' component={ProjectApp} params={this.scrollableContainer}/>
+					<Route exact path='/projects/:project' component={ProjectDetails}/>
+					<Route exact path='/about' component={About}/>
 				</div>
 			</div>
 		);
