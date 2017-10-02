@@ -145,6 +145,7 @@ export default class DialogExampleSimple extends React.Component {
 				return (
 					<div>
 						<TextField
+							className="email-text-field"
 							floatingLabelText="Your Email Adress"
 							onChange={(newEvent, newValue) => {
 								theirEmail = newValue;
@@ -157,6 +158,7 @@ export default class DialogExampleSimple extends React.Component {
 						/>
 						<br />
 						<TextField
+							className="email-text-field"
 							floatingLabelText="Subject"
 							onChange={(newEvent, newValue) => {
 								theirSubject = newValue;

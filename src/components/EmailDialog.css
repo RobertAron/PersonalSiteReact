@@ -9,3 +9,6 @@
     padding-bottom: 10px !important;
     height:300px;
 }
+.email-text-field{
+    max-width: 100%
+}
