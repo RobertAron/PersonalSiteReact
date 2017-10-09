@@ -17,7 +17,7 @@ export default class DrawerUndockedExample extends React.Component {
 		super(props);
 		this.checkbox = {
 			margin: 12,
-			width: 'calc(100%-24px)'
+			width: 30,
 		}
 	}
 
@@ -44,19 +44,20 @@ export default class DrawerUndockedExample extends React.Component {
 					width={200}
 					open={this.props.open}
 					onRequestChange={(open) => this.props.toggleDrawer()}
-					overlayClassName="overlay"
 				>
 					<h1 className="center">Filters</h1>
 					<Divider />
 
 					{this.createFilterList()}
+					
 					<IconButton
 						style={placeLast}
-						onTouchTap={this.handleClose}
+						onTouchTap={this.props.toggleDrawer}
 					>
 						<Close />
 					</IconButton>
 				</Drawer>
+				<ReactTooltip className="tool-tip" place="right" type="dark" effect="solid" />
 			</div>
 		);
 	}
@@ -70,8 +71,7 @@ export default class DrawerUndockedExample extends React.Component {
 		return this.props.tags.map((tag) => {
 			return (
 				<div key={tag[0]}>
-					<Checkbox checked={tag[2]} data-tip={tag[2]} label={tag[0]} disabled={tag[1]} style={this.checkbox} onCheck={() => this.props.toggleTag(tag[0])} />
-					<ReactTooltip place="right" type="dark" effect="solid" />
+					<Checkbox checked={tag[2]} data-tip={tag[3]} label={tag[0]} disabled={tag[1]} style={this.checkbox} onCheck={() => this.props.toggleTag(tag[0])} />
 				</div>
 			)
 		})

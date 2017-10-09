@@ -2,12 +2,11 @@ import projects from '../data/projects.json'
 
 const tags = [
     //tootlip disabled checked
-    ["Software", false, false],
-    ["Hackathon", false, false],
-    ["Web", false, false],
-    ["MongoDB", false, false],
-    ["Audio", false, false],
-    ["Music", false, false]
+    ["Software", false, false,"Turning text into magic!"],
+    ["Hackathon", false, false,"24-Hours to cram as many plugins into a project as you can."],
+    ["Web", false, false,"Projects just like the one you're looking at now!"],
+    ["Audio", false, false,"Anything and everything you can put through a speaker."],
+    ["Music", false, false,"Cool sounds that are layered with more cool sounds."]
 ]
 
 

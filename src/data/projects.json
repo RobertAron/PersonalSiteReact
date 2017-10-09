@@ -28,8 +28,7 @@
         "tags": [
             "Software",
             "Hackathon",
-            "Web",
-            "MongoDB"
+            "Web"
         ],
         "links": {
             "github": "https://github.com/kolten/toyota-eco-dash",
@@ -63,7 +62,6 @@
         ],
         "tags": [
             "Web",
-            "MongoDB",
             "Software",
             "Hackathon"
         ],

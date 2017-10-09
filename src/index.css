@@ -8,3 +8,7 @@ body {
   padding: 0;
   font-family: Roboto;
 }
+
+.__react_component_tooltip.show{
+  opacity: 1 !important;
+}
