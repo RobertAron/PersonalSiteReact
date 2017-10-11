@@ -12,7 +12,7 @@ class About extends Component{
     }
     render(){
         return(
-            <div className="about animated jackInTheBox">
+            <div className="about animated">
                 <div className="images">
                     <img src="../../res/self-image.jpg" alt="self-portrait" className="my-image"/>
                     <div className="quick-link-menu">
