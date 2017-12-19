@@ -269,5 +269,38 @@
             "devpost": "https://devpost.com/software/virtual-visulatization"
         },
         "date": "Oct 28 2017 00:00:00 GMT-0600 (Central Standard Time)"
+    },
+    {
+        "id": 10,
+        "thumbnail": "../../res/projects/wire-robot-0.png",
+        "images": [
+            "../../res/projects/wire-robot-1.png",
+            "../../res/projects/wire-robot-2.png",
+            "../../res/projects/wire-robot-3.gif",
+            "../../res/projects/wire-robot-4.gif"
+        ],
+        "projectTitle": "Cable Driven Robot",
+        "projectInfo": [
+            [
+                "What This Project Is",
+                "This was my senior design project. It was a 2-semester project with the goal of constructing and developing a cable-driven robot. The purpose of the robot was to be able to move an end effector in 3d space using 8 wires. XYZ coordinates are put into a list which creates a path for the robot to run."],
+            [
+                "How It Works",
+                "There are 8 wires in total that are connected to the center end effector. Each wire is controlled by a stepper motor. A microcontroller receives inputs from our GUI and moves each of the wire to release or contract wire from its spool. This wire length is exact for the position the end effector should move along. The cables together are able to move the end effector at very high speeds extremely accurately. The project requirements designated we use a generic box. The box could be replaced with a robot hand or other end effector device."
+            ],
+            [
+                "How it is Built",
+                "The frame for the robot primarily uses T-Slot and custom-built components which were designed in tinkercad and printed using 3d printers. Each of the 8 motors is connected to our control box, which contains the power for the motors as well as the microcontroller for sending information to each of the motors. The microcontroller is a teensy using an Arduino booter. The teensy receives path information and wire lengths from a USB port which is connected to a computer through a COM port. The paths are entered into the GUI and then can be exported out into the teensy, so any path is runnable."
+            ]
+        ],
+        "tags": [
+            "Software"
+        ],
+        "links": {
+            "devpost": "https://devpost.com/software/virtual-visulatization",
+            "youtube": "U72q_ReDpfg",
+            "github": "https://github.com/UtaCableDrivenRobot/WiredRobotApp"
+        },
+        "date": "Dec 12 2017 00:00:00 GMT-0600 (Central Standard Time)"
     }
 ]

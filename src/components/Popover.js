@@ -99,8 +99,8 @@ export default class PopoverExampleSimple extends React.Component {
                     <Menu>
                         <Link to={"/projects/" + this.props.title}>
                             <MenuItem
-                                primaryText="Learn More"
-                                key="Learn More"
+                                primaryText="learn more"
+                                key="learn more"
                                 leftIcon={<img src="../../res/icons/mipmap-xxhdpi/ic_launcher.png" alt="local" />}
                                 onTouchTap={this.handleRequestClose} />
                         </Link>
