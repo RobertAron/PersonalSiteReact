@@ -64,7 +64,7 @@ class ProjectDetailsContent extends Component {
                     null
                 }
                 {this.props.project.links.youtube ?
-                    <a target="_blank" rel="noopener noreferrer" href={this.props.project.links.youtube}>
+                    <a target="_blank" rel="noopener noreferrer" href={"https://youtu.be/" + this.props.project.links.youtube}>
                         <FontIcon className="fa fa-youtube quick-link" color={red900} />
                     </a>
                     :
