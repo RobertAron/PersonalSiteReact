@@ -5,7 +5,8 @@ import TextField from 'material-ui/TextField';
 import "./EmailDialog.css";
 import CircularProgress from 'material-ui/CircularProgress';
 import { red500 } from 'material-ui/styles/colors';
-const url = process.env.NODE_ENV !== 'production' ? 'http://localhost:9000' : 'http://robertaron.herokuapp.com';
+//const url = process.env.NODE_ENV !== 'production' ? 'http://localhost:9000' : 'http://robertaron.herokuapp.com';
+const url = 'http://www.robertaron.io';
 /**
  * Dialog with action buttons. The actions are passed in as an array of React objects,
  * in this example [FlatButtons](/#/components/flat-button).
