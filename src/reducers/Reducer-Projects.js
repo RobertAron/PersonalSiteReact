@@ -1,4 +1,5 @@
 import projects from '../data/projects.json'
+import games from '../data/games.json'
 
 const tags = [
     //tootlip disabled checked
@@ -17,6 +18,7 @@ const visibleProjects = projects.map((project) => {
 
 
 const defaultState = {
+    games: games,
     projects: projects,
     tags: tags,
     visibleProjects: visibleProjects

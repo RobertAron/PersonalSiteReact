@@ -19,6 +19,7 @@
     "react-scripts": "1.0.8",
     "react-tap-event-plugin": "^2.0.1",
     "react-tooltip": "^3.3.0",
+    "react-unity-webgl": "^6.4.0",
     "redux": "^3.7.1"
   },
   "scripts": {
