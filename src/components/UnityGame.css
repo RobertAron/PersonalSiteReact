@@ -3,3 +3,13 @@
     bottom: 0;
     height: 10px;
 }
+
+.game-container{
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

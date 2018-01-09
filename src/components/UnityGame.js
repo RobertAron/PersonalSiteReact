@@ -42,12 +42,12 @@ class ProjectDetails extends Component {
 		const unityLoader = '../../games/'+urlGameName+'_build/UnityLoader.js'
 		console.log(unityLoader);
 		return (
-			<div>
+			<div className = 'game-container'>
 				<Unity
 					src={gameSrc}
+					width='760px'
+					height='760px'
 					loader={unityLoader}
-					width="100%"
-					height="100%"
 					onProgress={this.onProgress}/>
 				{this.state.loadingAmount !== 100 &&
 					<LinearProgress mode="determinate" value={this.state.loadingAmount} className='loading-bar'/>
